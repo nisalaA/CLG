@@ -1,0 +1,226 @@
+/* General Body and Layout */
+body {
+    font-family: "Playfair Display", "Noto Sans", sans-serif;
+    background-color: #FFE5B4 !important; /* Peach background */
+    color: #222; /* Dark gray for readability */
+    line-height: 1.6; /* Adjust line spacing for readability */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif; /* Serif for headings */
+    color: #1a1a1a; /* Darker headings for stronger visual hierarchy */
+}
+
+p, a, span, div {
+    font-family: 'Noto Sans', sans-serif; /* Sans-serif for body text */
+}
+
+/* Luxury Color Palette */
+.text-gold { color: #D4AF37; } /* Deep gold for accents */
+.bg-gold { background-color: #D4AF37; }
+.border-gold { border-color: #D4AF37; }
+.hover\:text-gold:hover { color: #D4AF37; }
+
+.text-navy { color: #000080; } /* Deep navy */
+.bg-navy { background-color: #000080; }
+
+.text-emerald { color: #50C878; } /* Emerald green */
+.bg-emerald { background-color: #50C878; }
+
+.text-sapphire { color: #0F52BA; } /* Sapphire blue */
+.bg-sapphire { background-color: #0F52BA; }
+
+.text-ivory { color: #FFFFF0; } /* Ivory */
+.bg-ivory { background-color: #FFFFF0; }
+
+/* Header */
+header {
+    background-color:#222; /* Navbar color changed to beige */
+    position: sticky; /* Sticky navigation bar */
+    top: 0;
+    /* z-index is now handled by Tailwind classes in the HTML */
+
+    /*brown hex #6f4d1b*/
+    /*beige hex #f5f5dc*/
+}
+
+nav a {
+    padding-left: 20px;
+}
+
+/* Video Section */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 4xl; /* Tailwind's max-w-4xl */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.5rem; /* rounded-lg */
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.7) 100%);
+    opacity: 0.7;
+}
+
+/* Discover Section Parallax */
+.parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Gem Cards */
+.gem-card {
+    border-radius: 1rem; /* rounded-xl */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.05); /* soft shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center; /* Center-align text */
+    padding: 1rem; /* Add padding inside cards */
+}
+
+.gem-card:hover {
+    transform: translateY(-5px) scale(1.02); /* Lift and slight zoom effect */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15), 0 20px 25px rgba(0, 0, 0, 0.1);
+}
+
+.gem-image {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensure images cover the area */
+    border-radius: 0.5rem; /* Rounded corners for images */
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn-gold {
+    background-color: #D4AF37;
+    color: #222;
+    border-radius: 9999px; /* rounded-full */
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-gold:hover {
+    box-shadow: 0 0 15px 5px rgba(212, 175, 55, 0.6); /* Gold hover glow */
+    background-color: #c2a032; /* Slightly darker gold on hover */
+}
+
+/* Text Contrast */
+.text-shadow-subtle {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.text-overlay-dark {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+/* Animations (AOS or custom CSS) */
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-up.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    background-color: #222; /* Dark background */
+    color: #D4AF37; /* Gold text */
+    padding: 3rem 0;
+}
+
+footer a {
+    color: #D4AF37; /* Gold links */
+}
+
+footer a:hover {
+    color: #FFFDF5; /* White on hover */
+}
+
+/* Social Media Icons */
+.social-icon {
+    color: #D4AF37;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    color: #FFFDF5;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .gem-card {
+        margin-bottom: 1.5rem; /* Padding between gem cards on mobile */
+    }
+    .grid {
+        grid-template-columns: 1fr; /* Stack gem cards on small screens */
+    }
+    footer .flex-col, footer .md\:flex-row > div {
+        text-align: center;
+        justify-content: center;
+    }
+    /* Increase base font size for better readability on mobile */
+    body {
+        font-size: 18px;
+    }
+    /* Adjust hero text sizes for mobile */
+    .hero-h1 {
+        font-size: 2.5rem; /* 40px */
+    }
+    .hero-h2 {
+        font-size: 1.125rem; /* 18px */
+    }
+}
+
+/* Floating Chat Button - Placed outside other rules to ensure it is relative to the viewport */
+.floating-chat-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #D4AF37; /* Gold */
+    color: white;
+    border-radius: 9999px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.floating-chat-button:hover {
+    background-color: #0a3d8a; /* Darker sapphire on hover */
+    transform: scale(1.1);
+}
