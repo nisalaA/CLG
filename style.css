@@ -190,16 +190,13 @@ footer a:hover {
     .gem-card {
         margin-bottom: 1.5rem; /* Padding between gem cards on mobile */
     }
-    .grid {
-        grid-template-columns: 1fr; /* Stack gem cards on small screens */
-    }
     footer .flex-col, footer .md\:flex-row > div {
         text-align: center;
         justify-content: center;
     }
     /* Increase base font size for better readability on mobile */
-    body {
-        font-size: 175%;
+    html {
+        font-size: 75%;
     }
     /* Adjust hero text sizes for mobile */
     .hero-h1 {
