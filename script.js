@@ -11,9 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
 
     if (menuBtn && mobileMenu) {
         menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
     }
