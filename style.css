@@ -15,6 +15,11 @@ p, a, span, div {
     font-family: 'Noto Sans', sans-serif; /* Sans-serif for body text */
 }
 
+.font-playfair,
+.font-playfair * { /* Apply to the element and all its children */
+    font-family: 'Playfair Display', serif;
+}
+
 /* Luxury Color Palette */
 .text-gold { color: #D4AF37; } /* Deep gold for accents */
 .bg-gold { background-color: #D4AF37; }
@@ -46,6 +51,7 @@ header {
 
 nav a {
     padding-left: 20px;
+    font-family: 'Playfair Display', serif;
 }
 
 /* Video Section */
@@ -68,7 +74,7 @@ nav a {
 .video-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.7) 100%);
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 100%);
     opacity: 0.7;
 }
 
@@ -118,7 +124,8 @@ nav a {
 
 /* Text Contrast */
 .text-shadow-subtle {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+
 }
 
 .text-overlay-dark {
@@ -153,6 +160,7 @@ footer {
     background-color: #222; /* Dark background */
     color: #D4AF37; /* Gold text */
     padding: 3rem 0;
+    font-family: 'Playfair Display', serif;
 }
 
 footer a {
@@ -204,23 +212,44 @@ footer a:hover {
 
 /* Floating Chat Button - Placed outside other rules to ensure it is relative to the viewport */
 .floating-chat-button {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
     background-color: #D4AF37; /* Gold */
-    color: white;
+    color: #222;
     border-radius: 9999px;
     width: 60px;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);    
     transition: all 0.3s ease-in-out;
 }
 
 .floating-chat-button:hover {
-    background-color: #0a3d8a; /* Darker sapphire on hover */
+    background-color: #fcfdf1; /* Darker sapphire on hover */
     transform: scale(1.1);
+}
+
+/* Testimonial Slider */
+.testimonial-slide {
+    animation: fade 0.8s ease-in-out;
+}
+
+@keyframes fade {
+    from { opacity: 0.4 }
+    to { opacity: 1 }
+}
+
+.testimonial-dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #555;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.testimonial-dot.active, .testimonial-dot:hover {
+    background-color: #DAA520; /* Gold */
 }

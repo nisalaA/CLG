@@ -4,8 +4,10 @@
 <link as="style" href="https://fonts.googleapis.com/css2?display=swap&family=Playfair+Display:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 <title>CLG</title>
-<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="logo.png" rel="icon" type="image/png"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Preload the video to start downloading it with a low priority -->
+<link as="video" href="0129(4).mp4" rel="preload" type="video/mp4"/>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 <link href="style.css" rel="stylesheet"/> </head>
 <body class="flex flex-col min-h-screen">
@@ -46,106 +48,176 @@
 </header>
 <main class="flex-grow">
 <div class="relative h-[60vh] md:h-[80vh] w-full overflow-hidden flex items-center justify-center text-center">
-<video autoplay loop muted playsinline class="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover">
-<source src="0129(4).mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-<div class="absolute inset-0 bg-black/50"></div>
+<video id="hero-video" autoplay loop muted playsinline poster="hero-video-poster.jpg" class="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover">
+                Your browser does not support the video tag.</video>
+<div class="absolute inset-0 bg-black/25"></div>
 <div class="relative z-10 flex flex-col gap-4 items-center px-4" data-aos="fade-in" data-aos-delay="200">
 <h1 class="text-white text-4xl md:text-6xl leading-tight tracking-tighter hero-h1 text-shadow-subtle" data-aos="fade-down" data-aos-delay="400">Discover the Brilliance of Nature's Treasures</h1>
 <h2 class="text-white text-lg md:text-xl font-normal leading-normal max-w-2xl hero-h2 text-shadow-subtle" data-aos="fade-down" data-aos-delay="600">Explore our curated collection of exquisite gemstones, each with its unique story and allure.</h2>
-<button class="mt-4 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-[#DAA520] text-[#0e1b1b] text-base leading-normal tracking-wide hover:bg-opacity-90 transition-all" data-aos="fade-up" data-aos-delay="800">
+<button class="mt-4 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-[#DAA520] text-[#0e1b1b] text-base leading-normal tracking-wide hover:bg-opacity-90 transition-all font-playfair font-bold" data-aos="fade-up" data-aos-delay="800">
 <span>Shop Now</span>
 </button>
 </div>
 </div>
-<div class="px-4 md:px-10 py-10 md:py-20">
-<div class="layout-content-container flex flex-col max-w-6xl mx-auto">
-<section class="py-16">
-<h2 class="text-[#0e1b1b] text-4xl leading-tight tracking-tight text-center mb-10">Featured Gems</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-<div class="group bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
-<div class="overflow-hidden aspect-square">
+<div class="grid grid-cols-3">
+<div class="group relative aspect-square overflow-hidden" data-aos="fade-up" data-aos-delay="100">
 <div class="w-full h-full bg-cover bg-center transition-transform duration-300 ease-in-out group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCTPs3cbfWWfhApcIlrRjojgQsk4fjogVfQYOJaiQylo-PyF2ARm72Rzkn6N86VKYaG98Pvc3s2RAQjcDdJkMwkX2pvDPRLARqHapuN7OV2FdIYbQEi3mu2QPtwdGiwZAltY3hpJCrxUIlefKsajymamavd3tKSZczJO5pVjzegm5kBnxfR1dqQcqo5fM6p9gGvNptzhL3sm-mkOcqSg4f7oEylKmaZi60TklwZ474F3OqP1GPoHjC5Mt4bAf_iWMzOKcPfKlzTqP0");'></div>
-</div>
-<div class="p-5">
-<p class="text-[#0e1b1b] text-xl font-medium leading-normal">Amethyst</p>
-<p class="text-[#DAA520] text-base font-normal leading-normal mt-1">Known for its calming properties and rich purple hue.</p>
+<div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white text-2xl font-playfair">Amethyst</p>
 </div>
 </div>
-<div class="group bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
-<div class="overflow-hidden aspect-square">
+<div class="group relative aspect-square overflow-hidden" data-aos="fade-up" data-aos-delay="200">
 <div class="w-full h-full bg-cover bg-center transition-transform duration-300 ease-in-out group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAFjsOrdO45QhEA6_vLf1ZSCmPlsYuwAqkWgN0fttFc7lzdOegN2ucyavDRYgpe6wOhVozUUrtRfthorhjyE2xZiH8X7ub5ucrbrp-jMpmzbS6E-5IzjfA1u-tDCYIDQxbEUbFoqJrqsmt_Hj1jWFeYC4HiR2Hln1fY9pcS8AnhWltYg83AO87Mr26BY8Ci1hZd1nt2NPzR1VKEBHC5HPzkcvMcWlhSA36eMKGak8cbRQhFN47qDAu7xKPcXcsCUXAwhwSUCVj_TnM");'></div>
-</div>
-<div class="p-5">
-<p class="text-[#0e1b1b] text-xl font-medium leading-normal">Sapphire</p>
-<p class="text-[#DAA520] text-base font-normal leading-normal mt-1">A symbol of royalty and elegance, available in various colors.</p>
+<div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white text-2xl font-playfair">Sapphire</p>
 </div>
 </div>
-<div class="group bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
-<div class="overflow-hidden aspect-square">
+<div class="group relative aspect-square overflow-hidden" data-aos="fade-up" data-aos-delay="300">
 <div class="w-full h-full bg-cover bg-center transition-transform duration-300 ease-in-out group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAn67I8g__vQ8ooqaIljpWjVJqrMMNbvLveuVdgacCm9TDCPFTSDdHxkOJuEVRWAe94jvWFUM0tcrHItCzuLA2tWr5QLKfuc36UJ6F0cMhQZhzUSsCfRhqR-5_E67YEKph2yYWH_7BgsyxdkOIYsAEkhIoGXjLRsY7Zmar11yFqCq7nh2ePUqUENryYDa1cotPrJs1Bb6wIvGxy4UJnJS_X5XHpv6zpZSqJy4pmnhgJPAd9Txko8Lf20-bMNVQJlJjoa6U0oU5JJv4");'></div>
-</div>
-<div class="p-5">
-<p class="text-[#0e1b1b] text-xl font-medium leading-normal">Emerald</p>
-<p class="text-[#DAA520] text-base font-normal leading-normal mt-1">Prized for its vibrant green color and association with nature.</p>
+<div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white text-2xl font-playfair">Emerald</p>
 </div>
 </div>
-<div class="group bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
-<div class="overflow-hidden aspect-square">
+<div class="group relative aspect-square overflow-hidden" data-aos="fade-up" data-aos-delay="400">
 <div class="w-full h-full bg-cover bg-center transition-transform duration-300 ease-in-out group-hover:scale-110" style='background-image: url("ruby.png");'></div>
-</div>
-<div class="p-5">
-<p class="text-[#0e1b1b] text-xl font-medium leading-normal">Ruby</p>
-<p class="text-[#DAA520] text-base font-normal leading-normal mt-1">Symbolizes passion and vitality with its deep red color.</p>
+<div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white text-2xl font-playfair">Ruby</p>
 </div>
 </div>
-<div class="group bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
-<div class="overflow-hidden aspect-square">
+<div class="group relative aspect-square overflow-hidden" data-aos="fade-up" data-aos-delay="100">
 <div class="w-full h-full bg-cover bg-center transition-transform duration-300 ease-in-out group-hover:scale-110" style='background-image: url("topaz.png");'></div>
-</div>
-<div class="p-5">
-<p class="text-[#0e1b1b] text-xl font-medium leading-normal">Topaz</p>
-<p class="text-[#DAA520] text-base font-normal leading-normal mt-1">Represents love and affection, often found in a golden hue.</p>
+<div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white text-2xl font-playfair">Topaz</p>
 </div>
 </div>
-<div class="group bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
-<div class="overflow-hidden aspect-square">
+<div class="group relative aspect-square overflow-hidden" data-aos="fade-up" data-aos-delay="200">
 <div class="w-full h-full bg-cover bg-center transition-transform duration-300 ease-in-out group-hover:scale-110" style='background-image: url("peridot.png");'></div>
-</div>
-<div class="p-5">
-<p class="text-[#0e1b1b] text-xl font-medium leading-normal">Peridot</p>
-<p class="text-[#DAA520] text-base font-normal leading-normal mt-1">Symbolizes growth and renewal with its vibrant green color.</p>
+<div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<p class="text-white text-2xl font-playfair">Peridot</p>
 </div>
 </div>
-<div class="group bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
-<div class="overflow-hidden aspect-square">
-<div class="w-full h-full bg-cover bg-center transition-transform duration-300 ease-in-out group-hover:scale-110" style='background-image: url("opal.png");'></div>
 </div>
-<div class="p-5">
-<p class="text-[#0e1b1b] text-xl font-medium leading-normal">Opal</p>
-<p class="text-[#DAA520] text-base font-normal leading-normal mt-1">Symbolizes hope and purity, known for its unique play-of-color.</p>
+<div class="py-20" style="background-color: #FFE5B4;">
+<div class="layout-content-container flex flex-col max-w-6xl mx-auto px-4 md:px-10">
+<div class="text-left" data-aos="fade-in">
+<p class="text-4xl font-playfair leading-relaxed text-[#000000] max-w-3xl" data-aos="fade-up" data-aos-delay="200">Welcome to CLG, where elegance meets illumination in every gem. Discover our curated collection of luxurious, glowing gems that embody sophistication and prestige. Handcrafted in the heart of Colombo, CLG is your gateway to timeless beauty and unmatched quality. Elevate your elegance with us today.</p>
 </div>
 </div>
-<div class="group bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
-<div class="overflow-hidden aspect-square">
-<div class="w-full h-full bg-cover bg-center transition-transform duration-300 ease-in-out group-hover:scale-110" style='background-image: url("garnet.png");'></div>
 </div>
-<div class="p-5">
-<p class="text-[#0e1b1b] text-xl font-medium leading-normal">Garnet</p>
-<p class="text-[#DAA520] text-base font-normal leading-normal mt-1">A diverse group of minerals, with deep red being the most common color.</p>
+<div data-aos="fade-up">
+<img alt="Exquisite Gemstone Rings" class="w-full" src="gem.jpg"/>
+</div>
+<div class="flex flex-col md:flex-row items-center w-full">
+<div class="md:w-1/2 p-8 md:p-16 text-left" data-aos="fade-right">
+<h3 class="text-6xl font-playfair mb-4 text-[#0e1b1b]">Illuminate Your</h3>
+<h3 class="text-6xl font-playfair mb-4 text-[#0e1b1b]">Elegance</h3>
+<br/>
+<p class="text-xl leading-relaxed text-[#0e1b1b] font-playfair">
+            Discover the allure of luxury with clg's exquisite collection of glowing gems. Each piece is a masterpiece, crafted to enhance your elegance and radiate sophistication. Explore a world where elegance meets brilliance, and let your style shine with the opulence of clg's luxurious gems.
+        </p>
+<br/>
+<button class="mt-4 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-[#DAA520] text-[#0e1b1b] text-base leading-normal tracking-wide hover:bg-opacity-90 transition-all font-playfair font-bold" data-aos="fade-up" data-aos-delay="800">
+<span>Shop Now</span>
+</button>
+</div>
+<div class="md:w-1/2" data-aos="fade-left">
+<img alt="Mystical Opal Gemstone" class="w-full h-auto object-cover" src="garnet.png"/>
 </div>
 </div>
-</section></div>
+<div class="bg-[#222] py-20 md:py-32">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center" data-aos="fade-up">
+<h2 class="text-4xl md:text-5xl font-playfair text-white">Unveil the Elegance in Gems</h2>
+</div>
+<div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+<!-- Feature Card 1 -->
+<div class="text-left p-8 transition-transform duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+<div class="flex items-center h-20 w-20 mb-6">
+<img alt="Exquisite Gem Icon" class="w-16 h-16" src="f1.png"/>
+</div>
+<h3 class="text-3xl font-bold text-white">Exquisite Gem Collections</h3>
+<p class="mt-4 text-xl text-gray-300 font-playfair">Discover unparalleled beauty with our curated selection of luxurious gems from around the world.</p>
+</div>
+<!-- Feature Card 2 -->
+<div class="text-left p-8 transition-transform duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="200">
+<div class="flex items-center h-20 w-20 mb-6">
+<img alt="Exquisite Gem Icon" class="w-16 h-16" src="f2.png"/>
+</div>
+<h3 class="text-3xl font-bold text-white">Custom Jewelry Design</h3>
+<p class="mt-4 text-xl text-gray-300 font-playfair">Create your dream piece with our bespoke jewelry design service, tailored to your unique style.</p>
+</div>
+<!-- Feature Card 3 -->
+<div class="text-left p-8 transition-transform duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="300">
+<div class="flex items-center h-20 w-20 mb-6">
+<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+<path d="m21 21-6-6"></path>
+</svg>
+</div>
+<h3 class="text-3xl font-bold text-white">Gemstone Consultation Services</h3>
+<p class="mt-4 text-xl text-gray-300 font-playfair">Receive expert guidance from our gemologists to select the perfect stone for any occasion.</p>
+</div>
+<!-- Feature Card 4 -->
+<div class="text-left p-8 transition-transform duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="400">
+<div class="flex items-center h-20 w-20 mb-6">
+<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37a1.724 1.724 0 0 0 2.572 -1.065z"></path>
+<path d="m9 12 2 2 4-4"></path>
+</svg>
+</div>
+<h3 class="text-3xl font-bold text-white">Jewelry Maintenance and Care</h3>
+<p class="mt-4 text-xl text-gray-300 font-playfair">Ensure lasting elegance with our professional cleaning, inspection, and repair services for your precious pieces.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Client Testimonials Section -->
+<section class="bg-[#FFE5B4] py-20 md:py-32">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-left mb-16" data-aos="fade-up">
+<h2 class="text-4xl md:text-5xl font-playfair text-#222">Hear From Our Delighted Clients</h2>
+</div>
+<div class="relative max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+<!-- Testimonial Slides -->
+<div id="testimonial-slider">
+<div class="testimonial-slide bg-[#222] text-white p-8 md:p-12 rounded-2xl">
+<p class="text-xl md:text-2xl leading-relaxed font-playfair">“Discovering clg was like finding a hidden gem in Colombo! Their website presents an exquisite collection of elegant and luxurious stones that simply captivate. The shopping experience is seamless and truly elevates the joy of owning fine jewelry.”</p>
+<p class="mt-6 text-lg text-gold font-playfair">— Lakshan Silva</p>
+</div>
+<div class="testimonial-slide bg-[#222] text-white p-8 md:p-12 rounded-2xl hidden">
+<p class="text-xl md:text-2xl leading-relaxed font-playfair">“I was amazed by the craftsmanship and detail in my custom jewelry piece. The team listened carefully and brought my vision to life with stunning precision and care.”</p>
+<p class="mt-6 text-lg text-gold font-playfair">— Naduni Perera</p>
+</div>
+<div class="testimonial-slide bg-[#222] text-white p-8 md:p-12 rounded-2xl hidden">
+<p class="text-xl md:text-2xl leading-relaxed font-playfair">“From consultation to delivery, the experience was nothing short of exceptional. Each gem radiates brilliance, and their service made me feel like royalty.”</p>
+<p class="mt-6 text-lg text-gold font-playfair">— Dilan Fernando</p>
+</div>
+</div>
+<!-- Navigation Arrows -->
+<button id="prev-testimonial" class="absolute top-1/2 -translate-y-1/2 left-0 -translate-x-16 text-[#222]/50 hover:text-[#222] transition-colors">
+<span class="material-symbols-outlined text-5xl">chevron_left</span>
+</button>
+<button id="next-testimonial" class="absolute top-1/2 -translate-y-1/2 right-0 translate-x-16 text-[#222]/50 hover:text-[#222] transition-colors">
+<span class="material-symbols-outlined text-5xl">chevron_right</span>
+</button>
+<!-- Pagination Dots -->
+<div id="testimonial-dots" class="text-center mt-8">
+<span class="testimonial-dot active"></span>
+<span class="testimonial-dot"></span>
+<span class="testimonial-dot"></span>
+</div>
+</div>
+</div>
+</section>
+<div class="px-4 md:px-10 pb-10 md:pb-20">
 <div class="relative min-h-[480px] flex flex-col items-center justify-center text-center p-8 rounded-2xl overflow-hidden bg-cover bg-center" style='background-image: url("gems2.webp");' data-aos="zoom-in">
 <div class="absolute inset-0 bg-black/40"></div>
 <div class="relative z-10 flex flex-col gap-4 items-center">
 <h1 class="text-white text-5xl md:text-6xl leading-tight tracking-tighter text-shadow-subtle" data-aos="fade-down" data-aos-delay="200">Explore Our Full Collection</h1>
 <h2 class="text-white text-lg md:text-xl font-normal leading-normal max-w-2xl text-shadow-subtle">Discover a wide range of gemstones, from classic favorites to rare finds.</h2>
-<button class="mt-4 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-[#DAA520] text-[#0e1b1b] text-base leading-normal tracking-wide hover:bg-opacity-90 transition-all">
+<button class="mt-4 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-[#DAA520] text-[#0e1b1b] text-base leading-normal tracking-wide hover:bg-opacity-90 transition-all font-playfair font-bold">
 <span>Browse All Gems</span>
 </button>
-</div>
 </div>
 </div>
 </div>
@@ -153,12 +225,23 @@
 <footer class="mt-auto">
 <div class="max-w-7xl mx-auto px-10">
 <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-<div class="flex flex-wrap items-center justify-center gap-6">
+<div class="flex flex-col items-start gap-2">
+<div class="flex items-center gap-4">
+<img alt="Ceylon Lotus Gems Logo" class="h-12" src="logo.png"/>
+<h3 class="text-lg font-playfair text-[#DAA520]">CEYLON LOTUS GEMS</h3>
+</div>
+<p class="text-sm font-playfair mt-7">No.19/2B, High-Level Road,</p>
+<p class="text-sm font-playfair">Kirulapone, Colombo 05,</p>
+<p class="text-sm font-playfair">Sri Lanka</p>
+</div>
+</div>
+<div class="flex flex-row justify-between items-center font-playfair mt-8 py-4 border-t border-gray-700">
+<div class="flex flex-wrap items-center justify-start gap-6">
 <a class="text-base font-normal leading-normal transition-colors" href="#">Privacy Policy</a>
 <a class="text-base font-normal leading-normal transition-colors" href="#">Terms of Service</a>
 <a class="text-base font-normal leading-normal transition-colors" href="#">Contact Us</a>
 </div>
-<div class="flex justify-center gap-4">
+<div class="flex justify-end gap-4">
 <a class="social-icon" href="#" aria-label="Facebook">
 <svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
 <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path>
@@ -180,16 +263,21 @@
 </svg>
 </a>
 </div>
-<div class="text-center md:text-right">
-<p class="text-base font-normal leading-normal">© 2025 Ceylon Lotus Gems. All rights reserved.</p>
-<p class="text-sm">Authentically Sourced & Crafted in Sri Lanka.</p>
 </div>
 </div>
+<div class="text-center font-playfair py-4 text-xs bg-transparent text-white">
+<p class="font-normal leading-normal">© 2025 Ceylon Lotus Gems. All rights reserved. Authentically Sourced & Crafted in Sri Lanka.</p>
 </div>
 </footer>
-<button class="floating-chat-button" aria-label="Chat with us">
-<span class="material-symbols-outlined">chat</span>
-</button>
+<div class="fixed bottom-8 right-8 flex flex-col items-center gap-4 z-1000">
+    <!-- Back to Top Button -->
+    <button id="back-to-top-btn" class="hidden p-2 rounded-full bg-[#DAA520] text-[#222] shadow-lg hover:bg-opacity-90 transition-opacity duration-300" aria-label="Go to top">
+        <span class="material-symbols-outlined">arrow_upward</span>
+    </button>
+    <button class="floating-chat-button" aria-label="Chat with us">
+        <span class="material-symbols-outlined">chat</span>
+    </button>
+</div>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="script.js"></script>
 </body></html>

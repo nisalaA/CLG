@@ -17,4 +17,76 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenu.classList.toggle('hidden');
         });
     }
+
+    // Lazy load hero video
+    const heroVideo = document.getElementById('hero-video');
+    if (heroVideo) {
+        // Provide modern (WebM) and fallback (MP4) formats.
+        // The browser will use the first one it supports.
+        const sources = [
+            { src: '0129(4).webm', type: 'video/webm' },
+            { src: '0129(4).mp4', type: 'video/mp4' }
+        ];
+
+        sources.forEach(s => {
+            const sourceElement = document.createElement('source');
+            sourceElement.src = s.src;
+            sourceElement.type = s.type;
+            heroVideo.appendChild(sourceElement);
+        });
+        
+        heroVideo.load();
+    }
+
+    // Back to Top Button
+    const backToTopBtn = document.getElementById('back-to-top-btn');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('hidden');
+            } else {
+                backToTopBtn.classList.add('hidden');
+            }
+        });
+        backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+
+    // Testimonial Slider
+    const slider = document.getElementById('testimonial-slider');
+    if (slider) {
+        const slides = slider.getElementsByClassName('testimonial-slide');
+        const dots = document.getElementById('testimonial-dots').getElementsByClassName('testimonial-dot');
+        const prevBtn = document.getElementById('prev-testimonial');
+        const nextBtn = document.getElementById('next-testimonial');
+        let currentSlide = 0;
+        let slideInterval;
+
+        function showSlide(n) {
+            if (n >= slides.length) { currentSlide = 0; }
+            if (n < 0) { currentSlide = slides.length - 1; }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.add('hidden');
+                dots[i].classList.remove('active');
+            }
+
+            slides[currentSlide].classList.remove('hidden');
+            dots[currentSlide].classList.add('active');
+        }
+
+        const next = () => showSlide(++currentSlide);
+
+        const startSlider = () => slideInterval = setInterval(next, 5000); // Auto-slide every 5 seconds
+        const resetSlider = () => {
+            clearInterval(slideInterval);
+            startSlider();
+        };
+
+        prevBtn.addEventListener('click', () => { showSlide(--currentSlide); resetSlider(); });
+        nextBtn.addEventListener('click', () => { next(); resetSlider(); });
+        Array.from(dots).forEach((dot, i) => dot.addEventListener('click', () => { showSlide(currentSlide = i); resetSlider(); }));
+
+        showSlide(currentSlide);
+        startSlider();
+    }
 });
