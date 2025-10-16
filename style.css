@@ -199,7 +199,7 @@ footer a:hover {
     }
     /* Increase base font size for better readability on mobile */
     body {
-        font-size: 18px;
+        font-size: 175%;
     }
     /* Adjust hero text sizes for mobile */
     .hero-h1 {
