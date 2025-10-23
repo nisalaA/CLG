@@ -1,7 +1,7 @@
 /* General Body and Layout */
 body {
     font-family: "Playfair Display", "Noto Sans", sans-serif;
-    background-color: #FFE5B4 !important; /* Peach background */
+    background-color: #ffffff !important; /* Peach background */
     color: #222; /* Dark gray for readability */
     line-height: 1.6; /* Adjust line spacing for readability */
 }
@@ -39,14 +39,20 @@ p, a, span, div {
 .bg-ivory { background-color: #FFFFF0; }
 
 /* Header */
-header {
-    background-color:#222; /* Navbar color changed to beige */
-    position: sticky; /* Sticky navigation bar */
+.header-wrapper {
+    position: sticky; /* Sticky navigation bar wrapper */
     top: 0;
-    /* z-index is now handled by Tailwind classes in the HTML */
+    z-index: 50;
+}
 
-    /*brown hex #6f4d1b*/
-    /*beige hex #f5f5dc*/
+header {
+    background-color: rgba(34, 34, 34, 0.7); /* Dark background with 50% opacity for better readability */
+    margin: 1rem; /* Add margin to create the floating effect */
+    border-radius: 50px; /* rounded-xl */
+   /* border: 1px solid #222; /* Dark border */
+    backdrop-filter: blur(5px); /* Reduced blur effect */
+    -webkit-backdrop-filter: blur(5px); /* For Safari support */
+    /* position, top, and z-index are now handled by the wrapper */
 }
 
 nav a {
@@ -71,12 +77,6 @@ nav a {
     display: block;
 }
 
-.video-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 100%);
-    opacity: 0.7;
-}
 
 /* Discover Section Parallax */
 .parallax-bg {
@@ -209,20 +209,23 @@ footer a:hover {
 
 /* Floating Chat Button - Placed outside other rules to ensure it is relative to the viewport */
 .floating-chat-button {
-    background-color: #D4AF37; /* Gold */
-    color: #222;
+    background-color: rgba(251, 251, 251, 0.4); /* Light gray with 50% opacity */
+    color: #000000; /* Black */
     border-radius: 9999px;
     width: 60px;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);    
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
+    border: 1px solid #000000; /* Black outline */
+    backdrop-filter: blur(1px); /* Add blur effect */
+    -webkit-backdrop-filter: blur(5px); /* For Safari support */
 }
 
 .floating-chat-button:hover {
-    background-color: #fcfdf1; /* Darker sapphire on hover */
+    background-color: rgba(240, 240, 240, 0.8); /* Slightly more opaque gray on hover */
     transform: scale(1.1);
 }
 
