@@ -13,44 +13,42 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 <link href="style.css" rel="stylesheet"/> </head>
 <body class="bg-[#f8fcfc] flex flex-col min-h-screen overflow-x-hidden" style='font-family: "Playfair Display", "Noto Sans", sans-serif;'>
-<div class="header-wrapper"><header class="flex items-center justify-between whitespace-nowrap px-10 py-4 z-50">
-<div class="flex items-center text-[#0e1b1b] flex-1">
-<img alt="Gemstone Emporium Logo" class="h-8 w-8 mr-4" src="logo.png"/>
-<a href="index.html"><h2 class="text-[#DAA520] text-xl leading-tight tracking-[-0.015em]">CEYLON LOTUS GEMS</h2></a>
-</div>
-<!-- Desktop Menu -->
-<div class="hidden md:flex justify-center">
-<nav class="flex items-center gap-8 text-base text-white">
-<a class="font-medium leading-normal hover:text-[#DAA520] transition-colors" href="index.html">Home</a>
-<a class="font-medium leading-normal hover:text-[#DAA520] transition-colors" href="aboutus.html">About</a>
-<a class="font-medium leading-normal hover:text-[#DAA520] transition-colors" href="#">Contact</a>
-</nav>
-</div>
-<div class="hidden md:flex items-center justify-end gap-4 flex-1">
-<button class="p-2 text-[#DAA520] hover:text-[#DAA520] transition-colors">
-<span class="material-symbols-outlined">search</span>
-</button>
-<button class="p-2 text-[#DAA520] hover:text-[#DAA520] transition-colors">
-<span class="material-symbols-outlined">shopping_bag</span>
-</button>
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("dhanu.jpeg");'></div>
-</div>
-<!-- Mobile Menu Button -->
-<div class="md:hidden">
-<button id="menu-btn" class="p-2 text-[#DAA520] hover:text-[#DAA520] transition-colors">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-<!-- Mobile Menu Overlay -->
-<div id="mobile-menu" class="hidden md:hidden absolute top-0 left-0 w-full h-screen bg-black/80 flex flex-col items-center justify-center z-50">
-<button id="close-menu-btn" class="absolute top-4 right-4 p-2 text-white">
-<span class="material-symbols-outlined text-4xl">
-close
-</span></button>
-<a class="text-white text-2xl py-4" href="index.html">Home</a>
-<a class="text-white text-2xl py-4" href="aboutus.html">About</a>
-<a class="text-white text-2xl py-4" href="#">Contact</a>
-</div>
+<div class="header-wrapper"><header class="flex flex-wrap items-center justify-between whitespace-nowrap px-10 py-4 z-50">
+    <div class="flex justify-between items-center w-full">
+        <div class="flex items-center text-[#0e1b1b] flex-1">
+            <img alt="Gemstone Emporium Logo" class="h-8 w-8 mr-4" src="logo.png"/>
+            <a href="index.html"><h2 class="text-[#DAA520] text-xl leading-tight tracking-[-0.015em]">CEYLON LOTUS GEMS</h2></a>
+        </div>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex justify-center">
+            <nav class="flex items-center gap-8 text-base text-white">
+                <a class="font-medium leading-normal hover:text-[#DAA520] transition-colors" href="index.html">Home</a>
+                <a class="font-medium leading-normal hover:text-[#DAA520] transition-colors" href="aboutus.html">About</a>
+                <a class="font-medium leading-normal hover:text-[#DAA520] transition-colors" href="#">Contact</a>
+            </nav>
+        </div>
+        <div class="hidden md:flex items-center justify-end gap-4 flex-1">
+            <button class="p-2 text-[#DAA520] hover:text-[#DAA520] transition-colors">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+            <button class="p-2 text-[#DAA520] hover:text-[#DAA520] transition-colors">
+                <span class="material-symbols-outlined">shopping_bag</span>
+            </button>
+            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("dhanu.jpeg");'></div>
+        </div>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="p-2 text-[#DAA520] hover:text-[#DAA520] transition-colors">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="w-full md:hidden overflow-hidden">
+        <a class="mobile-menu-link text-white text-2xl py-4 block text-center" href="index.html">Home</a>
+        <a class="mobile-menu-link text-white text-2xl py-4 block text-center" href="aboutus.html">About</a>
+        <a class="mobile-menu-link text-white text-2xl py-4 block text-center" href="#">Contact</a>
+    </div>
 </header></div>
 <main class="flex-grow">
 <div class="px-4 sm:px-6 lg:px-8 py-10 md:py-20">
@@ -58,32 +56,32 @@ close
 <div class="px-4 pb-16" data-aos="fade-in">
 <h1 class="text-4xl leading-tight text-[#0e1b1b] text-center" data-aos="fade-down">Pure Origins. Perfect Brilliance.</h1>
 </br>
-<p class="mt-4 text-xl leading-relaxed text-[#0e1b1b] text-left font-playfair" data-aos="fade-up" data-aos-delay="200">
+<p class="mt-4 text-10px leading-relaxed text-[#707070] text-left font-rubik" data-aos="fade-up" data-aos-delay="200">
                             Nestled in the heart of Colombo, Ceylon Lotus Gems Pvt Ltd stands as a trusted name in Sri Lanka’s renowned gemstone industry. As a licensed gem exporter, we are dedicated to bringing the natural brilliance of gemstones to the global market with authenticity, artistry, and integrity.
 </p>
-<p class="mt-4 text-xl leading-relaxed text-[#0e1b1b] text-left font-playfair" data-aos="fade-up" data-aos-delay="200">
+<p class="mt-4 text-10px leading-relaxed text-[#707070] text-left font-rubik" data-aos="fade-up" data-aos-delay="200">
 Our legacy is inspired by the purity of the lotus — a symbol of beauty and enlightenment — and by Sri Lanka’s centuries-old gem heritage that has captivated the world since ancient times. Each gemstone we offer is a reflection of that legacy, carefully selected from ethical sources, precisely cut by master craftsmen, and certified for authenticity and quality.
 </p>
 
-<p class="mt-4 text-xl leading-relaxed text-[#0e1b1b] text-left font-playfair" data-aos="fade-up" data-aos-delay="200">
-At Ceylon Lotus Gems, we believe that every gemstone tells a story — a story of nature’s artistry and human expertise working in harmony. From the velvety blues of Ceylon sapphires to the vibrant hues of  spinels, and garnets, our collection celebrates the rare and radiant treasures of the island.
+<p class="mt-4 text-10px leading-relaxed text-[#707070] text-left font-rubik" data-aos="fade-up" data-aos-delay="200">
+At Ceylon Lotus Gems, we believe that every gemstone tells a story — a story of nature's artistry and human expertise working in harmony. From the velvety blues of Ceylon sapphires to the vibrant hues of  spinels, and garnets, our collection celebrates the rare and radiant treasures of the island.
 </p>
-<p class="mt-4 text-xl leading-relaxed text-[#0e1b1b] text-left font-playfair" data-aos="fade-up" data-aos-delay="200">
+<p class="mt-4 text-10px leading-relaxed text-[#707070] text-left font-rubik" data-aos="fade-up" data-aos-delay="200">
 We take pride in maintaining the highest standards of trust, transparency, and sustainability. Our commitment extends beyond trade — it is a promise to preserve Sri Lanka’s gem heritage while building long-term relationships with clients across the world.
 </p>
-<p class="mt-4 text-xl leading-relaxed text-[#0e1b1b] text-left font-playfair" data-aos="fade-up" data-aos-delay="200">
+<p class="mt-4 text-1px leading-relaxed text-[#707070] text-left font-rubik" data-aos="fade-up" data-aos-delay="200">
 Whether you are a jeweler, collector, or connoisseur, Ceylon Lotus Gems Pvt Ltd offers you more than gemstones — we offer a piece of Sri Lanka’s timeless beauty, perfected for the world.
 </p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 mt-16 mb-24">
 <div class="w-full h-96 overflow-hidden shadow-lg" data-aos="fade-up">
-<img alt="Gemstone cutting process" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaTP_HoaRc6oetzh97Re6OeoDRm6_8OxWKSkIrpUWGRFRrtKNxODhO-5VRn2QJBqBVtnaFkIbEtMOj5J9TprR1KHv7QX8a_f3gR9IIKAOZs5wovkbjk7vYI_54HKjuiqGn17XaWBYyliwpEHEYF-R5iXq4CiZ4U13GTbEPlXkK7eRHIOp-6SWawk2O0IodyRJaRj64O-vTZDfzbYlMa9deUZQSiZZMc5ynGX-Ac7qVL4x40RKKG8x-iJTrqzMShpk8Giz1RQhCqs0"/>
+<img alt="Gemstone cutting process" class="w-full h-full object-cover" src="rockgem.png"/>
 </div>
 <div class="w-full h-96 overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
-<img alt="Gemstone cutting process" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaTP_HoaRc6oetzh97Re6OeoDRm6_8OxWKSkIrpUWGRFRrtKNxODhO-5VRn2QJBqBVtnaFkIbEtMOj5J9TprR1KHv7QX8a_f3gR9IIKAOZs5wovkbjk7vYI_54HKjuiqGn17XaWBYyliwpEHEYF-R5iXq4CiZ4U13GTbEPlXkK7eRHIOp-6SWawk2O0IodyRJaRj64O-vTZDfzbYlMa9deUZQSiZZMc5ynGX-Ac7qVL4x40RKKG8x-iJTrqzMShpk8Giz1RQhCqs0"/>
+<img alt="Gemstone cutting process" class="w-full h-full object-cover" src="rockgem2.png"/>
 </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start px-4 mb-24">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start px-4 mb-24 overflow-x-hidden">
 <div class="space-y-6" data-aos="fade-right" data-aos-delay="200">
 <h2 class="text-4xl font-normal leading-tight text-[#0e1b1b]">Our Mission & Values</h2>
 <p class="text-lg leading-relaxed text-[#0e1b1b]">
@@ -100,37 +98,34 @@ Whether you are a jeweler, collector, or connoisseur, Ceylon Lotus Gems Pvt Ltd 
 <img alt="Gemstone cutting process" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaTP_HoaRc6oetzh97Re6OeoDRm6_8OxWKSkIrpUWGRFRrtKNxODhO-5VRn2QJBqBVtnaFkIbEtMOj5J9TprR1KHv7QX8a_f3gR9IIKAOZs5wovkbjk7vYI_54HKjuiqGn17XaWBYyliwpEHEYF-R5iXq4CiZ4U13GTbEPlXkK7eRHIOp-6SWawk2O0IodyRJaRj64O-vTZDfzbYlMa9deUZQSiZZMc5ynGX-Ac7qVL4x40RKKG8x-iJTrqzMShpk8Giz1RQhCqs0"/>
 </div>
 </div>
-<div class="pt-16 bg-[#f8fcfc]" data-aos="fade-up">
+<div class="pt-16 bg-[#f8ffff]" data-aos="fade-up">
 <h2 class="text-4xl font-normal leading-tight text-[#0e1b1b] px-4 pb-12 text-center">Meet the Artisans</h2>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 p-4" data-aos="fade-up" data-aos-delay="200">
 <div class="flex flex-col items-center text-center group">
 <div class="w-56 h-56 relative">
-<div class="absolute inset-0 bg-[#DAA520] rounded-full transform group-hover:scale-105 transition-transform duration-300 ease-in-out shadow-lg"></div>
-<img alt="Sophia Bennett" class="w-full h-full object-cover rounded-full p-2 relative z-10" src="dhanu.jpeg"/>
+<img alt="Dhanushka Karalliyadda" class="w-full h-full object-cover rounded-full shadow-lg transform group-hover:scale-105 transition-transform duration-300 ease-in-out" src="dhanu.jpeg"/>
 </div>
 <div class="mt-5">
-<p class="text-2xl font-medium text-[#0e1b1b]">Sophia Bennett</p>
-<p class="text-lg text-[#DAA520]">Lead Gemologist</p>
+<p class="text-2xl font-medium text-[#0e1b1b] font-rubik">Dhanushka Karalliyadda</p>
+<p class="text-lg text-[#DAA520] ">CEO & Founder</p>
 </div>
 </div>
 <div class="flex flex-col items-center text-center group">
 <div class="w-56 h-56 relative">
-<div class="absolute inset-0 bg-[#DAA520] rounded-full transform group-hover:scale-105 transition-transform duration-300 ease-in-out shadow-lg"></div>
-<img alt="Ethan Carter" class="w-full h-full object-cover rounded-full p-2 relative z-10" src="dhanu.jpeg"/>
+<img alt="Bhanu Munnapriya" class="w-full h-full object-cover rounded-full shadow-lg transform group-hover:scale-105 transition-transform duration-300 ease-in-out" src="bhanu munnipriya.jpg"/>
 </div>
 <div class="mt-5">
-<p class="text-2xl font-medium text-[#0e1b1b]">Ethan Carter</p>
-<p class="text-lg text-[#DAA520]">Chief Designer</p>
+<p class="text-2xl font-medium text-[#0e1b1b] font-rubik">Bhanu Munnapriya</p>
+<p class="text-lg text-[#DAA520] font-playfair">Director</p>
 </div>
 </div>
 <div class="flex flex-col items-center text-center group">
 <div class="w-56 h-56 relative">
-<div class="absolute inset-0 bg-[#DAA520] rounded-full transform group-hover:scale-105 transition-transform duration-300 ease-in-out shadow-lg"></div>
-<img alt="Olivia Davis" class="w-full h-full object-cover rounded-full p-2 relative z-10" src="dhanu.jpeg"/>
+<img alt="Sanath Elkaduwa" class="w-full h-full object-cover rounded-full shadow-lg transform group-hover:scale-105 transition-transform duration-300 ease-in-out" src="sanath elkaduwa.jpg"/>
 </div>
 <div class="mt-5">
-<p class="text-2xl font-medium text-[#0e1b1b]">Olivia Davis</p>
-<p class="text-lg text-[#DAA520]">Customer Relations</p>
+<p class="text-2xl font-medium text-[#0e1b1b] font-rubik">Sanath Elkaduwa</p>
+<p class="text-lg text-[#DAA520] font-playfair">Director</p>
 </div>
 </div>
 </div>

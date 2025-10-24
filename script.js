@@ -11,16 +11,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const header = document.querySelector('header');
 
-    if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+    const toggleMenu = () => {
+        const isOpen = mobileMenu.classList.toggle('is-open');
+        header.classList.toggle('is-open', isOpen);
 
-        closeMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        // Stagger link animation
+        if (isOpen) {
+            const links = mobileMenu.querySelectorAll('.mobile-menu-link');
+            links.forEach((link, index) => {
+                link.style.transitionDelay = `${index * 100 + 150}ms`;
+            });
+        } else {
+            const links = mobileMenu.querySelectorAll('.mobile-menu-link');
+            links.forEach(link => {
+                link.style.transitionDelay = '0ms';
+            });
+        }
+    };
+
+    if (menuBtn && mobileMenu && header) {
+        menuBtn.addEventListener('click', toggleMenu);
     }
 
     // Lazy load hero video

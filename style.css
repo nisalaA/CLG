@@ -1,14 +1,17 @@
 /* General Body and Layout */
 body {
     font-family: "Playfair Display", "Noto Sans", sans-serif;
-    background-color: #ffffff !important; /* Peach background */
+    background-color: #ffffff !important;
     color: #222; /* Dark gray for readability */
     line-height: 1.6; /* Adjust line spacing for readability */
+    /* Add padding to the top to prevent content from being hidden by the fixed header.
+       The value should be roughly the height of the header + its margin. */
+    padding-top: 100px;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif; /* Serif for headings */
-    color: #1a1a1a; /* Darker headings for stronger visual hierarchy */
+    color: #505050; /* Darker headings for stronger visual hierarchy */
 }
 
 p, a, span, div {
@@ -18,6 +21,21 @@ p, a, span, div {
 .font-playfair,
 .font-playfair * { /* Apply to the element and all its children */
     font-family: 'Playfair Display', serif;
+}
+
+.font-rubik,
+.font-rubik * {
+    font-family: 'Rubik', sans-serif;
+}
+
+.font-italianno,
+.font-italianno * {
+    font-family: 'Italianno', cursive;
+}
+
+.font-mulish,
+.font-mulish * {
+    font-family: 'Mulish', sans-serif;
 }
 
 /* Luxury Color Palette */
@@ -40,9 +58,12 @@ p, a, span, div {
 
 /* Header */
 .header-wrapper {
-    position: sticky; /* Sticky navigation bar wrapper */
+    position: fixed; /* Changed from sticky to fixed for overlay effect */
     top: 0;
+    left: 0; /* Make it span the full width */
+    right: 0; /* Make it span the full width */
     z-index: 50;
+    pointer-events: none; /* Allow clicks to pass through the wrapper to the content below */
 }
 
 header {
@@ -53,8 +74,15 @@ header {
     backdrop-filter: blur(5px); /* Reduced blur effect */
     -webkit-backdrop-filter: blur(5px); /* For Safari support */
     /* position, top, and z-index are now handled by the wrapper */
+    pointer-events: auto; /* Re-enable pointer events for the header itself */
 }
 
+/* When mobile menu is open, make header background solid */
+header.is-open {
+    /* When open, the header will expand, so we want the corners rounded */
+    border-bottom-left-radius: 50px; /* Match the header's default radius */
+    border-bottom-right-radius: 50px; /* Match the header's default radius */
+}
 nav a {
     padding-left: 20px;
     font-family: 'Playfair Display', serif;
@@ -187,6 +215,9 @@ footer a:hover {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
+    body {
+        padding-top: 90px; /* Adjust body padding for smaller header on mobile */
+    }
     .gem-card {
         margin-bottom: 1.5rem; /* Padding between gem cards on mobile */
     }
@@ -219,7 +250,6 @@ footer a:hover {
     justify-content: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
-    border: 1px solid #000000; /* Black outline */
     backdrop-filter: blur(1px); /* Add blur effect */
     -webkit-backdrop-filter: blur(5px); /* For Safari support */
 }
@@ -252,4 +282,40 @@ footer a:hover {
 
 .testimonial-dot.active, .testimonial-dot:hover {
     background-color: #DAA520; /* Gold */
+}
+
+/* Mobile Menu Transitions */
+#mobile-menu {
+    /* Apply the same glass effect as the header */
+    /* The background is now handled by the header element */
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+    /* Padding is 0 when closed */
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#mobile-menu.is-open {
+    max-height: 50vh; /* Animate to a height large enough for content */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Staggered link animation */
+.mobile-menu-link {
+    opacity: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+#mobile-menu.is-open .mobile-menu-link {
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+
+/* Ensure testimonial navigation arrows are hidden on mobile to prevent overflow */
+@media (max-width: 767px) { /* Targets screens smaller than Tailwind's 'md' breakpoint */
+    #prev-testimonial,
+    #next-testimonial {
+        display: none !important;
+    }
 }

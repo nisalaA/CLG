@@ -3,7 +3,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
 <link as="style" href="https://fonts.googleapis.com/css2?display=swap&family=Playfair+Display:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap" rel="stylesheet">
 <title>CLG</title>
 <link href="logo.png" rel="icon" type="image/png"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -12,51 +15,49 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 <link href="style.css" rel="stylesheet"/> </head>
 <body class="flex flex-col min-h-screen overflow-x-hidden">
-<div class="header-wrapper"><header class="flex items-center justify-between whitespace-nowrap px-10 py-4 z-50">
-<div class="flex items-center text-[#0e1b1b] flex-1">
-<img alt="Gemstone Emporium Logo" class="h-8 w-8 mr-4" src="logo.png"/>
-<a href="index.html"><h2 class="text-[#DAA520] text-xl leading-tight tracking-[-0.015em]">CEYLON LOTUS GEMS</h2></a>
-</div>
-<!-- Desktop Menu -->
-<div class="hidden md:flex justify-center">
-<nav class="flex items-center gap-8 text-base text-white">
-<a class="font-medium leading-normal hover:text-[#DAA520] transition-colors" href="index.html">Home</a>
-<a class="font-medium leading-normal hover:text-[#DAA520] transition-colors" href="aboutus.html">About</a>
-<a class="font-medium leading-normal hover:text-[#DAA520] transition-colors" href="#">Contact</a>
-</nav>
-</div>
-<div class="hidden md:flex items-center justify-end gap-4 flex-1">
-<button class="p-2 text-[#DAA520] hover:text-[#DAA520] transition-colors">
-<span class="material-symbols-outlined">search</span>
-</button>
-<button class="p-2 text-[#DAA520] hover:text-[#DAA520] transition-colors">
-<span class="material-symbols-outlined">shopping_bag</span>
-</button>
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("dhanu.jpeg");'></div>
-</div>
-<!-- Mobile Menu Button -->
-<div class="md:hidden">
-<button id="menu-btn" class="p-2 text-[#DAA520] hover:text-[#DAA520] transition-colors">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-<!-- Mobile Menu Overlay -->
-<div id="mobile-menu" class="hidden md:hidden absolute top-0 left-0 w-full h-screen bg-black/80 flex flex-col items-center justify-center z-50">
-<button id="close-menu-btn" class="absolute top-4 right-4 p-2 text-white">
-<span class="material-symbols-outlined text-4xl">
-close
-</span></button>
-<a class="text-white text-2xl py-4" href="index.html">Home</a>
-<a class="text-white text-2xl py-4" href="aboutus.html">About</a>
-<a class="text-white text-2xl py-4" href="#">Contact</a>
-</div>
+<div class="header-wrapper"><header class="flex flex-wrap items-center justify-between whitespace-nowrap px-10 py-4 z-50">
+    <div class="flex justify-between items-center w-full">
+        <div class="flex items-center text-[#0e1b1b] flex-1">
+            <img alt="Gemstone Emporium Logo" class="h-8 w-8 mr-4" src="logo.png"/>
+            <a href="index.html"><h2 class="text-[#DAA520] text-xl leading-tight tracking-[-0.015em]">CEYLON LOTUS GEMS</h2></a>
+        </div>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex justify-center">
+            <nav class="flex items-center gap-8 text-base text-white">
+                <a class="font-medium leading-normal hover:text-[#DAA520] transition-colors" href="index.html">Home</a>
+                <a class="font-medium leading-normal hover:text-[#DAA520] transition-colors" href="aboutus.html">About</a>
+                <a class="font-medium leading-normal hover:text-[#DAA520] transition-colors" href="#">Contact</a>
+            </nav>
+        </div>
+        <div class="hidden md:flex items-center justify-end gap-4 flex-1">
+            <button class="p-2 text-[#DAA520] hover:text-[#DAA520] transition-colors">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+            <button class="p-2 text-[#DAA520] hover:text-[#DAA520] transition-colors">
+                <span class="material-symbols-outlined">shopping_bag</span>
+            </button>
+            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("dhanu.jpeg");'></div>
+        </div>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="p-2 text-[#DAA520] hover:text-[#DAA520] transition-colors">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="w-full md:hidden overflow-hidden">
+        <a class="mobile-menu-link text-white text-2xl py-4 block text-center" href="index.html">Home</a>
+        <a class="mobile-menu-link text-white text-2xl py-4 block text-center" href="aboutus.html">About</a>
+        <a class="mobile-menu-link text-white text-2xl py-4 block text-center" href="#">Contact</a>
+    </div>
 </header></div>
 <main class="flex-grow">
-<div class="relative h-[60vh] md:h-[80vh] w-full overflow-hidden flex items-center justify-center text-center">
+<div class="relative h-[60vh] md:h-[80vh] w-full overflow-hidden flex items-center justify-center text-center -mt-[90px] md:-mt-[100px]">
 <video id="hero-video" autoplay loop muted playsinline poster="hero-video-poster.jpg" class="absolute z-0 w-full h-auto object-cover">
                 Your browser does not support the video tag.</video>
 </div>
-<div class="bg-[#ffffff] w-full py-12 md:py-16">
+<div class="bg-[#ffffff] w-full pt-0 pb-12 md:pt-16 md:pb-16 -mt-20 md:mt-0">
     <div class="max-w-4xl mx-auto text-center px-4" data-aos="fade-in" data-aos-delay="200">
         <h1 class="text-[#222] text-4xl md:text-6xl leading-tight tracking-tighter hero-h1" data-aos="fade-down" data-aos-delay="400">Discover the Brilliance of Nature's Treasures</h1>
         <h2 class="text-[#222] text-lg md:text-xl font-normal leading-normal max-w-2xl mx-auto mt-4" data-aos="fade-down" data-aos-delay="600">Explore our curated collection of exquisite gemstones, each with its unique story and allure.</h2>
@@ -113,12 +114,12 @@ close
 <div data-aos="fade-up">
 <img alt="Exquisite Gemstone Rings" class="w-full" src="gem.jpg"/>
 </div>
-<div class="flex flex-col md:flex-row w-full">
+<div class="flex flex-col md:flex-row w-full overflow-x-hidden">
 <div class="md:w-1/2 p-8 md:p-16 text-left" data-aos="fade-right">
-<h3 class="text-6xl font-playfair mb-4 text-[#0e1b1b]">Illuminate Your</h3>
-<h3 class="text-6xl font-playfair mb-4 text-[#0e1b1b]">Elegance</h3>
+<h3 class="text-7xl font-playfair mb-4 text-[#0e1b1b] pt-10">Illuminate Your</h3>
+<h3 class="text-7xl font-playfair mb-4 pb-8 text-[#0e1b1b]">Elegance</h3>
 <br/>
-<p class="text-xl leading-relaxed text-[#0e1b1b] font-playfair">
+<p class="text-xl leading-relaxed text-[#707070] font-rubik pb-8">
             Discover the allure of luxury with CLG's exquisite collection of glowing gems. Each piece is a masterpiece, crafted to enhance your elegance and radiate sophistication. Explore a world where elegance meets brilliance, and let your style shine with the opulence of CLG's luxurious gems.
         </p>
 <br/>
@@ -142,7 +143,7 @@ close
 <img alt="Exquisite Gem Icon" class="w-16 h-16" src="f1.png"/>
 </div>
 <h3 class="text-3xl font-bold text-white">Exquisite Gem Collections</h3>
-<p class="mt-4 text-xl text-gray-300 font-playfair">Discover unparalleled beauty with our curated selection of luxurious gems from around the world.</p>
+<p class="mt-4 text-xl text-gray-300 font-mulish">Discover unparalleled beauty with our curated selection of luxurious gems from around the world.</p>
 </div>
 <!-- Feature Card 2 -->
 <div class="text-left p-8 transition-transform duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="200">
@@ -150,7 +151,7 @@ close
 <img alt="Exquisite Gem Icon" class="w-16 h-16" src="f2.png"/>
 </div>
 <h3 class="text-3xl font-bold text-white">Custom Jewelry Design</h3>
-<p class="mt-4 text-xl text-gray-300 font-playfair">Create your dream piece with our bespoke jewelry design service, tailored to your unique style.</p>
+<p class="mt-4 text-xl text-gray-300 font-rubik">Create your dream piece with our bespoke jewelry design service, tailored to your unique style.</p>
 </div>
 <!-- Feature Card 3 -->
 <div class="text-left p-8 transition-transform duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="300">
@@ -161,7 +162,7 @@ close
 </svg>
 </div>
 <h3 class="text-3xl font-bold text-white">Gemstone Consultation Services</h3>
-<p class="mt-4 text-xl text-gray-300 font-playfair">Receive expert guidance from our gemologists to select the perfect stone for any occasion.</p>
+<p class="mt-4 text-xl text-gray-300 font-rubik">Receive expert guidance from our gemologists to select the perfect stone for any occasion.</p>
 </div>
 <!-- Feature Card 4 -->
 <div class="text-left p-8 transition-transform duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="400">
@@ -172,30 +173,30 @@ close
 </svg>
 </div>
 <h3 class="text-3xl font-bold text-white">Jewelry Maintenance and Care</h3>
-<p class="mt-4 text-xl text-gray-300 font-playfair">Ensure lasting elegance with our professional cleaning, inspection, and repair services for your precious pieces.</p>
+<p class="mt-4 text-xl text-gray-300 font-rubik">Ensure lasting elegance with our professional cleaning, inspection, and repair services for your precious pieces.</p>
 </div>
 </div>
 </div>
 </div>
 <!-- Client Testimonials Section -->
-<section class="bg-[#ffffff] py-20 md:py-32 overflow-hidden">
+<section class="bg-[#ffffff] py-20 md:py-32 overflow-x-hidden">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="text-left mb-16" data-aos="fade-up">
 <h2 class="text-4xl md:text-5xl font-playfair text-#222">Hear From Our Delighted Clients</h2>
 </div>
-<div class="relative max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+<div class="relative max-w-4xl mx-auto overflow-hidden" data-aos="fade-up" data-aos-delay="200">
 <!-- Testimonial Slides -->
 <div id="testimonial-slider">
 <div class="testimonial-slide bg-[#222] text-white p-8 md:p-12 rounded-2xl">
-<p class="text-xl md:text-2xl leading-relaxed font-playfair">“Discovering clg was like finding a hidden gem in Colombo! Their website presents an exquisite collection of elegant and luxurious stones that simply captivate. The shopping experience is seamless and truly elevates the joy of owning fine jewelry.”</p>
+<p class="text-xl md:text-2xl leading-relaxed font-mulish">“Discovering clg was like finding a hidden gem in Colombo! Their website presents an exquisite collection of elegant and luxurious stones that simply captivate. The shopping experience is seamless and truly elevates the joy of owning fine jewelry.”</p>
 <p class="mt-6 text-lg text-gold font-playfair">— Lakshan Silva</p>
 </div>
 <div class="testimonial-slide bg-[#222] text-white p-8 md:p-12 rounded-2xl hidden">
-<p class="text-xl md:text-2xl leading-relaxed font-playfair">“I was amazed by the craftsmanship and detail in my custom jewelry piece. The team listened carefully and brought my vision to life with stunning precision and care.”</p>
+<p class="text-xl md:text-2xl leading-relaxed font-mulish">“I was amazed by the craftsmanship and detail in my custom jewelry piece. The team listened carefully and brought my vision to life with stunning precision and care.”</p>
 <p class="mt-6 text-lg text-gold font-playfair">— Naduni Perera</p>
 </div>
 <div class="testimonial-slide bg-[#222] text-white p-8 md:p-12 rounded-2xl hidden">
-<p class="text-xl md:text-2xl leading-relaxed font-playfair">“From consultation to delivery, the experience was nothing short of exceptional. Each gem radiates brilliance, and their service made me feel like royalty.”</p>
+<p class="text-xl md:text-2xl leading-relaxed font-mulish">“From consultation to delivery, the experience was nothing short of exceptional. Each gem radiates brilliance, and their service made me feel like royalty.”</p>
 <p class="mt-6 text-lg text-gold font-playfair">— Dilan Fernando</p>
 </div>
 </div>
@@ -236,17 +237,17 @@ close
 <img alt="Ceylon Lotus Gems Logo" class="h-12" src="logo.png"/>
 <a href="index.html"><h3 class="text-lg font-playfair text-[#DAA520]">CEYLON LOTUS GEMS</h3></a>
 </div>
-<p class="text-sm font-playfair mt-7">No.19/2B, High-Level Road,</p>
-<p class="text-sm font-playfair">Kirulapone, Colombo 05,</p>
-<p class="text-sm font-playfair">Sri Lanka</p>
+<p class="text-sm font-rubik mt-7">No.19/2B, High-Level Road,</p>
+<p class="text-sm font-rubik">Kirulapone, Colombo 05,</p>
+<p class="text-sm font-rubik">Sri Lanka</p>
 </div>
 <div class="flex flex-col items-start gap-2 text-left">
     <h3 class="text-lg font-playfair text-[#DAA520] font-bold">Quick Links</h3>
     <div class="flex flex-col items-start gap-1 mt-2">
-        <a class="text-base font-playfair leading-normal transition-colors" href="index.html">Home</a>
-        <a class="text-base font-playfair leading-normal transition-colors" href="aboutus.html">About Us</a>
-        <a class="text-base font-playfair leading-normal transition-colors" href="#">Shop</a>
-        <a class="text-base font-playfair leading-normal transition-colors" href="#">Blog</a>
+        <a class="text-base font-rubik leading-normal transition-colors" href="index.html">Home</a>
+        <a class="text-base font-rubik leading-normal transition-colors" href="aboutus.html">About Us</a>
+        <a class="text-base font-rubik leading-normal transition-colors" href="contactus.html">Contact</a>
+        <a class="text-base font-rubik leading-normal transition-colors" href="#">Blog</a>
     </div>
 </div>
 <div class="flex flex-col items-start gap-2 text-left">
@@ -268,16 +269,16 @@ close
 <div class="flex justify-end gap-4"></div>
 </div>
 </div>
-<div class="text-center font-playfair py-4 text-xs bg-transparent text-white">
+<div class="text-center font-rubik py-4 text-xs bg-transparent text-white">
 <p class="font-normal leading-normal">© 2025 Ceylon Lotus Gems. All rights reserved. Authentically Sourced & Crafted in Sri Lanka.</p>
 </div>
 </footer>
 <div class="fixed bottom-8 right-8 flex flex-col items-center gap-4 z-1000">
     <!-- Back to Top Button -->
-    <button id="back-to-top-btn" class="hidden p-2 rounded-full bg-white/50 text-black border border-black shadow-lg hover:bg-gray-100/70 transition-all duration-300 backdrop-blur-[5px]" aria-label="Go to top">
+    <button id="back-to-top-btn" class="hidden p-2 rounded-full bg-black/50 text-white shadow-lg hover:bg-gray-100/70 transition-all duration-300 backdrop-blur-[5px]" aria-label="Go to top">
         <span class="material-symbols-outlined">arrow_upward</span>
     </button>
-    <button class="floating-chat-button" aria-label="Chat with us">
+    <button class="floating-chat-button text-white bg-black/50 shadow-lg hover:bg-gray-100/70 transition-all duration-300" aria-label="Chat with us">
         <span class="material-symbols-outlined">chat</span>
     </button>
 </div>
