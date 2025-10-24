@@ -1,12 +1,15 @@
 /* General Body and Layout */
 body {
     font-family: "Playfair Display", "Noto Sans", sans-serif;
-    background-color: #ffffff !important;
+    background-color: #222 !important; /* Set the base background to dark */
     color: #222; /* Dark gray for readability */
     line-height: 1.6; /* Adjust line spacing for readability */
-    /* Add padding to the top to prevent content from being hidden by the fixed header.
-       The value should be roughly the height of the header + its margin. */
+    /* Add padding to the top to account for the fixed header's height + margin + desired gap */
     padding-top: 100px;
+}
+
+.content-wrapper {
+    background-color: #ffffff; /* White background for the main content */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -216,7 +219,7 @@ footer a:hover {
         padding-right: 1.5rem;
     }
     body {
-        padding-top: 90px; /* Adjust body padding for smaller header on mobile */
+        padding-top: 100px;
     }
     .gem-card {
         margin-bottom: 1.5rem; /* Padding between gem cards on mobile */
@@ -240,8 +243,8 @@ footer a:hover {
 
 /* Floating Chat Button - Placed outside other rules to ensure it is relative to the viewport */
 .floating-chat-button {
-    background-color: rgba(251, 251, 251, 0.4); /* Light gray with 50% opacity */
-    color: #000000; /* Black */
+    background-color: rgba(255, 215, 0, 0.4); /* Light gray with 50% opacity */
+    color: #FFD700; /* Gold */
     border-radius: 9999px;
     width: 60px;
     height: 60px;
