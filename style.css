@@ -70,12 +70,13 @@ p, a, span, div {
 }
 
 header {
-    background-color: rgba(34, 34, 34, 0.7); /* Dark background with 50% opacity for better readability */
+    background: rgba(255, 255, 255, 0.1); /* Lighter, more transparent background for a glassy feel */
     margin: 1rem; /* Add margin to create the floating effect */
     border-radius: 50px; /* rounded-xl */
-   /* border: 1px solid #222; /* Dark border */
-    backdrop-filter: blur(5px); /* Reduced blur effect */
-    -webkit-backdrop-filter: blur(5px); /* For Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Subtle border to define the glass edge */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Soft shadow for depth */
+    backdrop-filter: blur(10px); /* Increased blur for a more liquid effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
     /* position, top, and z-index are now handled by the wrapper */
     pointer-events: auto; /* Re-enable pointer events for the header itself */
 }
@@ -86,6 +87,20 @@ header.is-open {
     border-bottom-left-radius: 50px; /* Match the header's default radius */
     border-bottom-right-radius: 50px; /* Match the header's default radius */
 }
+
+/* Default header text color for dark backgrounds */
+header nav a,
+header .material-symbols-outlined {
+    color: #ffffff; /* White */
+    text-shadow: 0 0 5px rgba(34, 34, 34, 0.7); /* Add a subtle black outline/shadow */
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+/* Ensure Material Symbols font is applied correctly */
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined', sans-serif;
+}
+
 nav a {
     padding-left: 20px;
     font-family: 'Playfair Display', serif;

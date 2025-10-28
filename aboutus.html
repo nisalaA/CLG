@@ -13,45 +13,47 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 <link href="style.css" rel="stylesheet"/> </head>
 <body class="bg-[#f8fcfc] flex flex-col min-h-screen overflow-x-hidden" style='font-family: "Playfair Display", "Noto Sans", sans-serif;'>
-<div class="header-wrapper"><header class="flex flex-wrap items-center justify-between whitespace-nowrap px-10 py-4 z-50">
-    <div class="flex justify-between items-center w-full">
-        <div class="flex items-center text-[#0e1b1b] flex-1">
-            <img alt="Gemstone Emporium Logo" class="h-8 w-8 mr-4" src="logo.png"/>
-            <a href="index.html"><h2 class="text-[#DAA520] text-xl leading-tight tracking-[-0.015em]">CEYLON LOTUS GEMS</h2></a>
+    <div class="header-wrapper"><header class="flex flex-wrap items-center justify-between whitespace-nowrap px-10 py-4 z-50">
+        <div class="flex justify-between items-center w-full">
+            <div class="flex items-center text-[#0e1b1b] flex-1">
+                <img alt="Gemstone Emporium Logo" class="h-8 w-8 mr-4" src="logo.png"/>
+                <a href="index.html"><h2 class="text-[#DAA520] text-xl leading-tight tracking-[-0.015em]">CEYLON LOTUS GEMS</h2></a>
+            </div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex justify-center">
+                <nav class="flex items-center gap-8 text-base">
+                    <a class="font-medium leading-normal hover:text-[#DAA520] transition-colors" href="index.html">Home</a>
+                    <a class="font-medium leading-normal hover:text-[#DAA520] transition-colors" href="aboutus.html">About</a>
+                    <a class="font-medium leading-normal hover:text-[#DAA520] transition-colors" href="contactus.html">Contact</a>
+                </nav>
+            </div>
+            <div class="hidden md:flex items-center justify-end gap-4 flex-1">
+                <button class="p-2 text-[#DAA520] hover:text-[#DAA520] transition-colors">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+                <button class="p-2 text-[#DAA520] hover:text-[#DAA520] transition-colors">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                </button>
+                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("dhanu.jpeg");'></div>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="p-2 text-[#DAA520] hover:text-[#DAA520] transition-colors">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
         </div>
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex justify-center">
-            <nav class="flex items-center gap-8 text-base text-white">
-                <a class="font-medium leading-normal hover:text-[#DAA520] transition-colors" href="index.html">Home</a>
-                <a class="font-medium leading-normal hover:text-[#DAA520] transition-colors" href="aboutus.html">About</a>
-                <a class="font-medium leading-normal hover:text-[#DAA520] transition-colors" href="#">Contact</a>
-            </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="w-full md:hidden overflow-hidden">
+            <a class="mobile-menu-link text-white text-2xl py-4 block text-center" href="index.html">Home</a>
+            <a class="mobile-menu-link text-white text-2xl py-4 block text-center" href="aboutus.html">About</a>
+            <a class="mobile-menu-link text-white text-2xl py-4 block text-center" href="contactus.html">Contact</a>
         </div>
-        <div class="hidden md:flex items-center justify-end gap-4 flex-1">
-            <button class="p-2 text-[#DAA520] hover:text-[#DAA520] transition-colors">
-                <span class="material-symbols-outlined">search</span>
-            </button>
-            <button class="p-2 text-[#DAA520] hover:text-[#DAA520] transition-colors">
-                <span class="material-symbols-outlined">shopping_bag</span>
-            </button>
-            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("dhanu.jpeg");'></div>
-        </div>
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden">
-            <button id="menu-btn" class="p-2 text-[#DAA520] hover:text-[#DAA520] transition-colors">
-                <span class="material-symbols-outlined">menu</span>
-            </button>
-        </div>
-    </div>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="w-full md:hidden overflow-hidden">
-        <a class="mobile-menu-link text-white text-2xl py-4 block text-center" href="index.html">Home</a>
-        <a class="mobile-menu-link text-white text-2xl py-4 block text-center" href="aboutus.html">About</a>
-        <a class="mobile-menu-link text-white text-2xl py-4 block text-center" href="#">Contact</a>
-    </div>
-</header></div>
+    </header></div>
 <main class="flex-grow content-wrapper">
-<div class="px-4 sm:px-6 lg:px-8 py-10 md:py-20">
+<!-- Add a small, transparent section at the top to set the initial header theme to dark -->
+<section class="h-[1px]"></section>
+<section class="px-4 sm:px-6 lg:px-8 py-10 md:py-20">
 <div class="layout-content-container flex flex-col max-w-6xl mx-auto">  
 <div class="px-4 pb-16" data-aos="fade-in">
 <h1 class="text-4xl leading-tight text-[#0e1b1b] text-center" data-aos="fade-down">Pure Origins. Perfect Brilliance.</h1>
@@ -81,22 +83,30 @@ Whether you are a jeweler, collector, or connoisseur, Ceylon Lotus Gems Pvt Ltd 
 <img alt="Gemstone cutting process" class="w-full h-full object-cover" src="rockgem2.png"/>
 </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start px-4 mb-24 overflow-x-hidden">
-<div class="space-y-6" data-aos="fade-right" data-aos-delay="200">
-<h2 class="text-4xl font-normal leading-tight text-[#0e1b1b]">Our Mission & Values</h2>
-<p class="text-lg leading-relaxed text-[#0e1b1b]">
-                                Our mission is to provide access to the finest quality gems, crafted into timeless pieces that reflect the unique beauty of each stone. We strive to educate and inspire our customers, fostering a deeper appreciation for the artistry and natural wonders behind every gem.
-                            </p>
-<div class="space-y-3 text-lg text-[#0e1b1b]">
-<p><span class="font-normal text-[#DAA520]">Integrity:</span> Upholding honesty and transparency from source to sale.</p>
-<p><span class="font-normal text-[#DAA520]">Quality:</span> Meticulously selecting and crafting only the finest gems.</p>
-<p><span class="font-normal text-[#DAA520]">Sustainability:</span> Committing to ethical practices that respect our planet and its people.</p>
-<p><span class="font-normal text-[#DAA520]">Customer Focus:</span> Providing personalized service for a memorable experience.</p>
+<!-- Our Vision Section -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-4 mb-24 overflow-x-hidden">
+    <div class="w-full h-96 overflow-hidden shadow-lg hover:shadow-xl" data-aos="fade-right">
+        <img alt="Vision of gemstone brilliance" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaTP_HoaRc6oetzh97Re6OeoDRm6_8OxWKSkIrpUWGRFRrtKNxODhO-5VRn2QJBqBVtnaFkIbEtMOj5J9TprR1KHv7QX8a_f3gR9IIKAOZs5wovkbjk7vYI_54HKjuiqGn17XaWBYyliwpEHEYF-R5iXq4CiZ4U13GTbEPlXkK7eRHIOp-6SWawk2O0IodyRJaRj64O-vTZDfzbYlMa9deUZQSiZZMc5ynGX-Ac7qVL4x40RKKG8x-iJTrqzMShpk8Giz1RQhCqs0"/>
+    </div>
+    <div class="space-y-6" data-aos="fade-left" data-aos-delay="200">
+        <h2 class="text-4xl font-normal leading-tight text-[#0e1b1b]">Our Vision</h2>
+        <p class="text-lg leading-relaxed text-[#0e1b1b]">
+            To be the world's most trusted and inspiring source for ethically sourced, exquisitely crafted gemstones, illuminating lives with timeless beauty and elegance. We envision a world where every gem from Ceylon Lotus Gems is a cherished symbol of artistry, integrity, and natural wonder.
+        </p>
+    </div>
 </div>
-</div>
-<div class="w-full h-96 overflow-hidden shadow-lg hover:shadow-xl" data-aos="fade-left">
-<img alt="Gemstone cutting process" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaTP_HoaRc6oetzh97Re6OeoDRm6_8OxWKSkIrpUWGRFRrtKNxODhO-5VRn2QJBqBVtnaFkIbEtMOj5J9TprR1KHv7QX8a_f3gR9IIKAOZs5wovkbjk7vYI_54HKjuiqGn17XaWBYyliwpEHEYF-R5iXq4CiZ4U13GTbEPlXkK7eRHIOp-6SWawk2O0IodyRJaRj64O-vTZDfzbYlMa9deUZQSiZZMc5ynGX-Ac7qVL4x40RKKG8x-iJTrqzMShpk8Giz1RQhCqs0"/>
-</div>
+
+<!-- Our Mission Section -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-4 mb-24 overflow-x-hidden">
+    <div class="space-y-6 md:order-2" data-aos="fade-right" data-aos-delay="200">
+        <h2 class="text-4xl font-normal leading-tight text-[#0e1b1b]">Our Mission</h2>
+        <p class="text-lg leading-relaxed text-[#0e1b1b]">
+            Our mission is to provide access to the finest quality gems, crafted into timeless pieces that reflect the unique beauty of each stone. We strive to educate and inspire our customers, fostering a deeper appreciation for the artistry and natural wonders behind every gem, while upholding the highest standards of integrity and sustainability.
+        </p>
+    </div>
+    <div class="w-full h-96 overflow-hidden shadow-lg hover:shadow-xl md:order-1" data-aos="fade-left">
+        <img alt="Crafting a gemstone" class="w-full h-full object-cover" src="gem.jpg"/>
+    </div>
 </div>
 <div class="pt-16 bg-[#f8ffff]" data-aos="fade-up">
 <h2 class="text-4xl font-normal leading-tight text-[#0e1b1b] px-4 pb-12 text-center">Meet the Artisans</h2>
@@ -131,50 +141,64 @@ Whether you are a jeweler, collector, or connoisseur, Ceylon Lotus Gems Pvt Ltd 
 </div>
 </div>
 </div>
-</div>
-</main>
-<footer class="mt-auto">
+</section>
+</main><footer class="mt-auto">
 <div class="max-w-7xl mx-auto px-10">
 <div class="flex flex-col md:flex-row justify-between md:items-start gap-8">
-<div class="flex flex-col items-start gap-2">
-<div class="flex items-center gap-4">
-<img alt="Ceylon Lotus Gems Logo" class="h-12" src="logo.png"/>
-<a href="index.html"><h3 class="text-lg font-playfair text-[#DAA520]">CEYLON LOTUS GEMS</h3></a>
-</div>
-<p class="text-sm font-playfair mt-7">No.19/2B, High-Level Road,</p>
-<p class="text-sm font-playfair">Kirulapone, Colombo 05,</p>
-<p class="text-sm font-playfair">Sri Lanka</p>
-</div>
-<div class="flex flex-col items-start gap-2 text-left">
-<h3 class="text-lg font-playfair text-[#DAA520] font-bold">Quick Links</h3>
-<div class="flex flex-col items-start gap-1 mt-2">
-<a class="text-base font-playfair leading-normal transition-colors" href="index.html">Home</a>
-<a class="text-base font-playfair leading-normal transition-colors" href="aboutus.html">About Us</a>
-<a class="text-base font-playfair leading-normal transition-colors" href="#">Shop</a>
-<a class="text-base font-playfair leading-normal transition-colors" href="#">Blog</a>
-</div>
-</div>
-<div class="flex flex-col items-start gap-2 text-left">
-<h3 class="text-lg font-playfair text-[#DAA520] font-bold">Follow Us</h3>
-<div class="flex items-center gap-4 mt-2">
-<a class="social-icon" href="#" aria-label="Facebook"><svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path></svg></a>
-<a class="social-icon" href="#" aria-label="Instagram"><svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path></svg></a>
-<a class="social-icon" href="#" aria-label="TikTok"><svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M240,80v96a16,16,0,0,1-16,16H176a16,16,0,0,1-16-16V115.32a48,48,0,0,0-44.2,44.18A47.39,47.39,0,0,0,112,160a48,48,0,1,0-48,48,47.39,47.39,0,0,0,.5,6.2A16,16,0,0,1,48.68,224H32a16,16,0,0,1-16-16V64A16,16,0,0,1,32,48H80a16,16,0,0,1,16,16v99.32a48.08,48.08,0,0,0,88.2-31.5A47.39,47.39,0,0,0,184,128a48,48,0,0,0,40-47.5V64a16,16,0,0,1,16-16h16A16,16,0,0,1,240,64Z"></path></svg></a>
-<a class="social-icon" href="#" aria-label="YouTube"><svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M234.33,73.83a32.3,32.3,0,0,0-22.79-22.8C194.2,45.05,128,45.05,128,45.05s-66.2,0-83.54,5.98A32.3,32.3,0,0,0,21.67,73.83,337.43,337.43,0,0,0,16,128a337.43,337.43,0,0,0,5.67,54.17,32.3,32.3,0,0,0,22.79,22.8C61.8,211,128,211,128,211s66.2,0,83.54-5.98a32.3,32.3,0,0,0,22.79-22.8A337.43,337.43,0,0,0,240,128,337.43,337.43,0,0,0,234.33,73.83ZM104,156V100l48,28Z"></path></svg></a>
-</div>
-</div>
+    <div class="flex flex-col items-center md:items-start gap-2">
+        <a href="index.html" class="flex items-center gap-4">
+            <img alt="Ceylon Lotus Gems Logo" class="h-12" src="logo.png" />
+            <h3 class="text-lg font-playfair text-[#DAA520]">CEYLON LOTUS GEMS</h3>
+        </a>
+    </div>
+    <div class="w-full md:w-auto flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 text-center md:text-left">
+        <div class="flex flex-col items-center md:items-start gap-2">
+            <h3 class="text-lg font-playfair text-[#DAA520] font-bold">Quick Links</h3>
+            <div class="flex flex-col items-center md:items-start gap-1 mt-2 pt-1">
+                <a class="text-sm font-rubik" href="index.html">Home</a>
+                <a class="text-sm font-rubik" href="aboutus.html">About Us</a>
+                <a class="text-sm font-rubik" href="contactus.html">Contact</a>
+                <a class="text-sm font-rubik" href="#">Blog</a>
+            </div>
+        </div>
+        <div class="flex flex-col items-center md:items-start gap-2">
+            <h3 class="text-lg font-playfair text-[#DAA520] font-bold">Follow Us</h3>
+            <div class="flex items-center gap-4 mt-2">
+                <a class="social-icon" href="#" aria-label="Facebook"><svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path></svg></a>
+                <a class="social-icon" href="#" aria-label="Instagram"><svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path></svg></a>
+                <a class="social-icon" href="#" aria-label="TikTok"><svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M240,80v96a16,16,0,0,1-16,16H176a16,16,0,0,1-16-16V115.32a48,48,0,0,0-44.2,44.18A47.39,47.39,0,0,0,112,160a48,48,0,1,0-48,48,47.39,47.39,0,0,0,.5,6.2A16,16,0,0,1,48.68,224H32a16,16,0,0,1-16-16V64A16,16,0,0,1,32,48H80a16,16,0,0,1,16,16v99.32a48.08,48.08,0,0,0,88.2-31.5A47.39,47.39,0,0,0,184,128a48,48,0,0,0,40-47.5V64a16,16,0,0,1,16-16h16A16,16,0,0,1,240,64Z"></path></svg></a>
+                <a class="social-icon" href="#" aria-label="YouTube"><svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M234.33,73.83a32.3,32.3,0,0,0-22.79-22.8C194.2,45.05,128,45.05,128,45.05s-66.2,0-83.54,5.98A32.3,32.3,0,0,0,21.67,73.83,337.43,337.43,0,0,0,16,128a337.43,337.43,0,0,0,5.67,54.17,32.3,32.3,0,0,0,22.79,22.8C61.8,211,128,211,128,211s66.2,0,83.54-5.98a32.3,32.3,0,0,0,22.79-22.8A337.43,337.43,0,0,0,240,128,337.43,337.43,0,0,0,234.33,73.83ZM104,156V100l48,28Z"></path></svg></a>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
+        <div class="flex items-start gap-3 mt-2">
+            <span class="material-symbols-outlined text-base mt-1">location_on</span>
+            <div>
+                <p class="text-sm font-rubik">No.19/2B, High-Level Road,</p>
+                <p class="text-sm font-rubik">Kirulapone, Colombo 05, Sri Lanka</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-3 mt-2">
+            <span class="material-symbols-outlined text-base">call</span>
+            <a href="tel:+94112807053" class="text-sm font-rubik hover:text-white transition-colors">+94 11 280 7053</a>
+        </div>
+        <div class="flex items-center gap-3 mt-2">
+            <span class="material-symbols-outlined text-base">mail</span>
+            <a href="mailto:sales@clglk.com" class="text-sm font-rubik hover:text-white transition-colors">sales@clglk.com</a>
+        </div>
+    </div>
 </div>
 <div class="flex flex-row justify-between items-center font-playfair mt-8 py-4 border-t border-gray-700">
 <div class="flex flex-wrap items-center justify-start gap-6">
 <a class="text-base font-normal leading-normal transition-colors" href="#">Privacy Policy</a>
 <a class="text-base font-normal leading-normal transition-colors" href="#">Terms of Service</a>
-<a class="text-base font-normal leading-normal transition-colors" href="#">Contact Us</a>
+<a class="text-base font-normal leading-normal transition-colors" href="contactus.html">Contact Us</a>
 </div>
 <div class="flex justify-end gap-4"></div>
 </div>
 </div>
-</div>
-<div class="text-center font-playfair py-4 text-xs bg-transparent text-white">
+<div class="text-center font-rubik py-4 text-[10px] sm:text-xs bg-transparent text-white">
 <p class="font-normal leading-normal">© 2025 Ceylon Lotus Gems. All rights reserved. Authentically Sourced & Crafted in Sri Lanka.</p>
 </div>
 </footer>

@@ -106,4 +106,5 @@ document.addEventListener('DOMContentLoaded', () => {
         showSlide(currentSlide);
         startSlider();
     }
+
 });
