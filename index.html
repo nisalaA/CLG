@@ -14,7 +14,13 @@
 <link as="video" href="0129(4).mp4" rel="preload" type="video/mp4"/>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 <link href="style.css" rel="stylesheet"/> </head>
-<body class="flex flex-col min-h-screen overflow-x-hidden">
+<body class="flex flex-col min-h-screen overflow-x-hidden homepage">
+<!-- Preloader -->
+<div id="preloader">
+    <div class="preloader-logo">
+        <img src="logo.png" alt="Loading..." />
+    </div>
+</div>
 <div class="header-wrapper"><header class="flex flex-wrap items-center justify-between whitespace-nowrap px-10 py-4 z-50">
     <div class="flex justify-between items-center w-full">
         <div class="flex items-center text-[#0e1b1b] flex-1">
@@ -53,7 +59,7 @@
     </div>
 </header></div>
 <main class="flex-grow content-wrapper">
-<section class="relative h-[60vh] md:h-[80vh] w-full overflow-hidden flex items-center justify-center text-center pt-20 md:pt-0" data-section-theme="dark">
+<section class="relative h-[60vh] md:h-[80vh] w-full overflow-hidden flex items-center justify-center text-center pt-20 md:pt-0 video-section" data-section-theme="dark">
 <video id="hero-video" autoplay loop muted playsinline poster="hero-video-poster.jpg" class="absolute z-0 w-full h-auto object-cover">
                 Your browser does not support the video tag.</video>
 </section>
@@ -147,7 +153,7 @@
 </div>
 </section>
 <section data-aos="fade-up" data-section-theme="dark">
-<img alt="Exquisite Gemstone Rings" class="w-full" src="gem.jpg"/>
+<img alt="Exquisite Gemstone Rings" class="w-full" src="gem.jpg" loading="lazy"/>
 </section>
 <section class="flex flex-col md:flex-row w-full overflow-x-hidden" data-section-theme="light">
 <div class="md:w-1/2 p-8 md:p-16 text-left" data-aos="fade-right">
@@ -252,7 +258,7 @@
 </section>
 <section class="px-4 md:px-10 pb-10 md:pb-20" data-section-theme="dark">
 <div class="relative min-h-[480px] flex flex-col items-center justify-center text-center p-8 rounded-2xl overflow-hidden bg-cover bg-center" style='background-image: url("gems2.webp");' data-aos="zoom-in">
-<div class="absolute inset-0 bg-black/40"></div>
+<div class="absolute inset-0 bg-black/20"></div>
 <div class="relative z-10 flex flex-col gap-4 items-center">
 <h1 class="text-white text-5xl md:text-6xl leading-tight tracking-tighter text-shadow-subtle" data-aos="fade-down" data-aos-delay="200">Explore Our Full Collection</h1>
 <h2 class="text-white text-lg md:text-xl font-normal leading-normal max-w-2xl text-shadow-subtle">Discover a wide range of gemstones, from classic favorites to rare finds.</h2>

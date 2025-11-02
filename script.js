@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Preloader
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        window.addEventListener('load', () => {
+            preloader.style.opacity = '0';
+            preloader.style.visibility = 'hidden';
+            // Optional: remove the preloader from the DOM after the transition
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 800); // Match the CSS transition duration
+        });
+    }
     // AOS Initialization
     if (typeof AOS !== 'undefined') {
         AOS.init({
@@ -107,4 +119,21 @@ document.addEventListener('DOMContentLoaded', () => {
         startSlider();
     }
 
+    // Header scroll effect
+    const headerElement = document.querySelector('header');
+
+    if (headerElement) {
+        const handleScroll = () => {
+            // Add a class when scrolled down, remove it when at the top
+            if (window.scrollY > 50) { // 50px threshold
+                headerElement.classList.remove('header-transparent');
+            } else {
+                headerElement.classList.add('header-transparent');
+            }
+        };
+
+        // Listen for scroll events
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Run on page load
+    }
 });

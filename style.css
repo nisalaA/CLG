@@ -80,6 +80,19 @@ header {
     /* position, top, and z-index are now handled by the wrapper */
     pointer-events: auto; /* Re-enable pointer events for the header itself */
 }
+/* Add a transition for the background properties */
+header {
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out, -webkit-backdrop-filter 0.3s ease-in-out;
+}
+
+/* Class to make the header transparent */
+.header-transparent {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
 
 /* When mobile menu is open, make header background solid */
 header.is-open {
@@ -121,6 +134,17 @@ nav a {
     width: 100%;
     height: auto;
     display: block;
+}
+
+/* Remove top padding on the homepage to make the video touch the top */
+.homepage {
+    padding-top: 0;
+}
+
+/* Adjust the video section on the homepage */
+.homepage .video-section {
+    height: 100vh; /* Make the video section take the full viewport height */
+    padding-top: 0; /* Remove any top padding */
 }
 
 
@@ -336,4 +360,51 @@ footer a:hover {
     #next-testimonial {
         display: none !important;
     }
+}
+
+/* Preloader Styles */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #222; /* Match the site's dark background */
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.75s ease-in-out, visibility 0.75s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}
+
+.preloader-logo {
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.preloader-logo img {
+    max-width: 150px; /* Adjust size as needed */
+    height: auto;
+}
+
+/* Keyframe animation for the pulsing effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Custom class for taller grid images */
+.grid-image-tall {
+    height: 400px; /* You can adjust this value as needed */
 }

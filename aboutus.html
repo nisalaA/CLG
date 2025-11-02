@@ -13,6 +13,12 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 <link href="style.css" rel="stylesheet"/> </head>
 <body class="bg-[#f8fcfc] flex flex-col min-h-screen overflow-x-hidden" style='font-family: "Playfair Display", "Noto Sans", sans-serif;'>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-logo">
+            <img src="logo.png" alt="Loading..." />
+        </div>
+    </div>
     <div class="header-wrapper"><header class="flex flex-wrap items-center justify-between whitespace-nowrap px-10 py-4 z-50">
         <div class="flex justify-between items-center w-full">
             <div class="flex items-center text-[#0e1b1b] flex-1">
@@ -56,7 +62,7 @@
 <section class="px-4 sm:px-6 lg:px-8 py-10 md:py-20">
 <div class="layout-content-container flex flex-col max-w-6xl mx-auto">  
 <div class="px-4 pb-16" data-aos="fade-in">
-<h1 class="text-4xl leading-tight text-[#0e1b1b] text-center" data-aos="fade-down">Pure Origins. Perfect Brilliance.</h1>
+<h1 class="text-6xl leading-tight text-[#505050] text-center" data-aos="fade-down">Pure Origins. Perfect Brilliance.</h1>
 </br>
 <p class="mt-4 text-10px leading-relaxed text-[#707070] text-left font-rubik" data-aos="fade-up" data-aos-delay="200">
                             Nestled in the heart of Colombo, Ceylon Lotus Gems Pvt Ltd stands as a trusted name in Sri Lanka’s renowned gemstone industry. As a licensed gem exporter, we are dedicated to bringing the natural brilliance of gemstones to the global market with authenticity, artistry, and integrity.
@@ -85,22 +91,24 @@ Whether you are a jeweler, collector, or connoisseur, Ceylon Lotus Gems Pvt Ltd 
 </div>
 <!-- Our Vision Section -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-4 mb-24 overflow-x-hidden">
-    <div class="w-full h-96 overflow-hidden shadow-lg hover:shadow-xl" data-aos="fade-right">
-        <img alt="Vision of gemstone brilliance" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaTP_HoaRc6oetzh97Re6OeoDRm6_8OxWKSkIrpUWGRFRrtKNxODhO-5VRn2QJBqBVtnaFkIbEtMOj5J9TprR1KHv7QX8a_f3gR9IIKAOZs5wovkbjk7vYI_54HKjuiqGn17XaWBYyliwpEHEYF-R5iXq4CiZ4U13GTbEPlXkK7eRHIOp-6SWawk2O0IodyRJaRj64O-vTZDfzbYlMa9deUZQSiZZMc5ynGX-Ac7qVL4x40RKKG8x-iJTrqzMShpk8Giz1RQhCqs0"/>
-    </div>
     <div class="space-y-6" data-aos="fade-left" data-aos-delay="200">
-        <h2 class="text-4xl font-normal leading-tight text-[#0e1b1b]">Our Vision</h2>
-        <p class="text-lg leading-relaxed text-[#0e1b1b]">
+        <h2 class="text-6xl font-normal leading-tight text-[#505050]">Our Vision</h2>
+    </br>
+        <p class="mt-4 text-10px leading-relaxed text-[#707070] text-left font-rubik" data-aos="fade-up" data-aos-delay="200">
             To be the world's most trusted and inspiring source for ethically sourced, exquisitely crafted gemstones, illuminating lives with timeless beauty and elegance. We envision a world where every gem from Ceylon Lotus Gems is a cherished symbol of artistry, integrity, and natural wonder.
         </p>
+    </div>
+    <div class="w-full h-96 overflow-hidden shadow-lg hover:shadow-xl" data-aos="fade-right">
+        <img alt="Vision of gemstone brilliance" class="w-full h-full object-cover" src="vision.png"/>
     </div>
 </div>
 
 <!-- Our Mission Section -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-4 mb-24 overflow-x-hidden">
     <div class="space-y-6 md:order-2" data-aos="fade-right" data-aos-delay="200">
-        <h2 class="text-4xl font-normal leading-tight text-[#0e1b1b]">Our Mission</h2>
-        <p class="text-lg leading-relaxed text-[#0e1b1b]">
+        <h2 class="text-6xl font-normal leading-tight text-[#505050]">Our Mission</h2>
+    </br>
+        <p class="mt-4 text-10px leading-relaxed text-[#707070] text-left font-rubik" data-aos="fade-up" data-aos-delay="200">
             Our mission is to provide access to the finest quality gems, crafted into timeless pieces that reflect the unique beauty of each stone. We strive to educate and inspire our customers, fostering a deeper appreciation for the artistry and natural wonders behind every gem, while upholding the highest standards of integrity and sustainability.
         </p>
     </div>
@@ -108,6 +116,54 @@ Whether you are a jeweler, collector, or connoisseur, Ceylon Lotus Gems Pvt Ltd 
         <img alt="Crafting a gemstone" class="w-full h-full object-cover" src="gem.jpg"/>
     </div>
 </div>
+
+<!-- Image Grid Section with Parallax Background -->
+<section class="pb-20 md:pb-28 bg-[#ffffff]" data-section-theme="light">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-[#000000]">
+        <div class="text-center py-20" data-aos="fade-in">
+            <h2 class="text-4xl md:text-5xl font-playfair">Company Values</h2>
+        </div>
+    </div>
+    <!-- Full-width grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <!-- Grid Item 1 -->
+        <div class="group relative" data-aos="fade-up" data-aos-delay="100">
+            <img src="purplesapphire.png" alt="Exquisite Ruby" class="w-full object-cover shadow-xl transition-transform duration-300 group-hover:scale-105 grid-image-tall"/>
+            <div class="absolute bottom-0 left-0 p-4">
+                <p class="font-playfair text-white text-3xl">Authenticity</p>
+            </br>
+                <p class="font-nunito-sans text-white/90 text-sm">Every gemstone is ethically sourced and certified genuine — a true reflection of Sri Lanka’s natural treasure.</p>
+            </div>
+        </div>
+        <!-- Grid Item 2 -->
+        <div class="group relative" data-aos="fade-up" data-aos-delay="200">
+            <img src="cutting.png" alt="Brilliant Sapphire" class="w-full object-cover shadow-xl transition-transform duration-300 group-hover:scale-105 grid-image-tall"/>
+            <div class="absolute bottom-0 left-0 p-4">
+                <p class="font-playfair text-white text-3xl">Craftsmanship</p>
+            </br>
+                <p class="font-nunito-sans text-white/90 text-sm">Our skilled gem cutters and polishers transform rough stones into exquisite works of art, preserving traditional techniques.</p>
+            </div>
+        </div>
+        <!-- Grid Item 3 -->
+        <div class="group relative" data-aos="fade-up" data-aos-delay="300">
+            <img src="handshake.png" alt="Vibrant Emerald" class="w-full object-cover shadow-xl transition-transform duration-300 group-hover:scale-105 grid-image-tall"/>
+            <div class="absolute bottom-0 left-0 p-4">
+                <p class="font-playfair text-white text-3xl">Trust & Integrity</p>
+                </br>
+                <p class="font-nunito-sans text-white/90 text-sm">Transparency and honesty guide every transaction, from sourcing to export, ensuring confidence among global clients.</p>
+            </div>
+        </div>
+        <!-- Grid Item 4 -->
+        <div class="group relative" data-aos="fade-up" data-aos-delay="400">
+            <img src="sustainability.png" alt="Shimmering Topaz" class="w-full object-cover shadow-xl transition-transform duration-300 group-hover:scale-105 grid-image-tall"/>
+            <div class="absolute bottom-0 left-0 p-4">
+                <p class="font-playfair text-white text-3xl">Sustainability</p>
+            </br>
+                <p class="font-nunito-sans text-white/90 text-sm">Committed to responsible mining and fair trade practices that protect the environment and support local communities.</p>
+            </div>
+        </div>
+    </div>
+</section>
 <div class="pt-16 bg-[#f8ffff]" data-aos="fade-up">
 <h2 class="text-4xl font-normal leading-tight text-[#0e1b1b] px-4 pb-12 text-center">Meet the Artisans</h2>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 p-4" data-aos="fade-up" data-aos-delay="200">
@@ -117,7 +173,7 @@ Whether you are a jeweler, collector, or connoisseur, Ceylon Lotus Gems Pvt Ltd 
 </div>
 <div class="mt-5">
 <p class="text-2xl font-medium text-[#0e1b1b] font-rubik">Bhanu Munnapriya</p>
-<p class="text-lg text-[#DAA520] ">Chairman</p>
+<p class="mt-1 text-10px leading-relaxed text-[#707070] font-rubik">Chairman</p>
 </div>
 </div>
 <div class="flex flex-col items-center text-center group">
@@ -126,7 +182,7 @@ Whether you are a jeweler, collector, or connoisseur, Ceylon Lotus Gems Pvt Ltd 
 </div>
 <div class="mt-5">
 <p class="text-2xl font-medium text-[#0e1b1b] font-rubik">Sanath Elkaduwa</p>
-<p class="text-lg text-[#DAA520] font-playfair">Managing Director</p>
+<p class="mt-1 text-10px leading-relaxed text-[#707070] font-rubik">Managing Director</p>
 </div>
 </div>
 <div class="flex flex-col items-center text-center group">
@@ -135,7 +191,7 @@ Whether you are a jeweler, collector, or connoisseur, Ceylon Lotus Gems Pvt Ltd 
 </div>
 <div class="mt-5">
 <p class="text-2xl font-medium text-[#0e1b1b] font-rubik">Dhanushka Karalliyadda</p>
-<p class="text-lg text-[#DAA520] font-playfair">Director</p>
+<p class="mt-1 text-10px leading-relaxed text-[#707070] font-rubik">Director</p>
 </div>
 </div>
 </div>
