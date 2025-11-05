@@ -4,11 +4,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
 <link as="style" href="https://fonts.googleapis.com/css2?display=swap&family=Playfair+Display:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap">
-<link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap" rel="stylesheet">
-
+<!-- Combined Google Fonts link -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900&family=Rubik:wght@400;500;700&family=Italianno&family=Mulish:wght@400;500;700&family=Material+Symbols+Outlined&display=swap" rel="stylesheet">
 <title>CLG - Contact Us</title>
 <link href="logo.png" rel="icon" type="image/png"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -28,21 +25,12 @@
                 <a href="index.html"><h2 class="text-[#DAA520] text-xl leading-tight tracking-[-0.015em]">CEYLON LOTUS GEMS</h2></a>
             </div>
             <!-- Desktop Menu -->
-            <div class="hidden md:flex justify-center">
-                <nav class="flex items-center gap-8 text-base">
-                    <a class="font-medium leading-normal hover:text-[#DAA520] transition-colors" href="index.html">Home</a>
-                    <a class="font-medium leading-normal hover:text-[#DAA520] transition-colors" href="aboutus.html">About</a>
-                    <a class="font-medium leading-normal hover:text-[#DAA520] transition-colors" href="contactus.html">Contact</a>
-                </nav>
-            </div>
             <div class="hidden md:flex items-center justify-end gap-4 flex-1">
-                <button class="p-2 text-[#DAA520] hover:text-[#DAA520] transition-colors">
-                    <span class="material-symbols-outlined">search</span>
-                </button>
-                <button class="p-2 text-[#DAA520] hover:text-[#DAA520] transition-colors">
-                    <span class="material-symbols-outlined">shopping_bag</span>
-                </button>
-                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("dhanu.jpeg");'></div>
+                <nav class="flex items-center gap-8 text-base">
+                    <a class="font-medium leading-normal hover:text-[#DAA520] transition-colors text-[#505050]" style="text-shadow: none;" href="index.html">Home</a>
+                    <a class="font-medium leading-normal hover:text-[#DAA520] transition-colors text-[#505050]" style="text-shadow: none;" href="aboutus.html">About</a>
+                    <a class="font-medium leading-normal hover:text-[#DAA520] transition-colors text-[#505050]" style="text-shadow: none;" href="contactus.html">Contact</a>
+                </nav>
             </div>
             <!-- Mobile Menu Button -->
             <div class="md:hidden">
@@ -58,7 +46,7 @@
             <a class="mobile-menu-link text-white text-2xl py-4 block text-center" href="contactus.html">Contact</a>
         </div>
     </header></div>
-<main class="flex-grow content-wrapper">
+<main class="flex-grow content-wrapper" style="background-color: #F5F5F5;">
     <!-- Hero Section -->
     <section class="relative py-32 md:py-48 flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('gems3.png');">
         <div class="absolute inset-0 bg-black/30"></div>
@@ -146,14 +134,17 @@
 <footer class="mt-auto" data-section-theme="dark">
 <div class="max-w-7xl mx-auto px-10">
 <div class="flex flex-col md:flex-row justify-between md:items-start gap-8">
-    <div class="flex flex-col items-center md:items-start gap-2">
-        <a href="index.html" class="flex items-center gap-4">
-            <img alt="Ceylon Lotus Gems Logo" class="h-12" src="logo.png" />
-            <h3 class="text-lg font-playfair text-[#DAA520]">CEYLON LOTUS GEMS</h3>
-        </a>
+    <div class="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
+        <div class="flex items-center gap-4">
+            <a href="index.html"><img alt="Ceylon Lotus Gems Logo" class="h-12" src="logo.png" /></a>
+            <div>
+                <a href="index.html"><h3 class="text-lg font-playfair text-[#DAA520]">CEYLON LOTUS GEMS</h3></a>
+                <p class="text-xs text-white/70 font-rubik mt-1 pt-1">More than just gems.</p>
+            </div>
+        </div>
     </div>
-    <div class="w-full md:w-auto flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 text-center md:text-left">
-        <div class="flex flex-col items-center md:items-start gap-2">
+    <div class="w-full md:w-auto flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 text-center md:text-left">
+        <div class="flex flex-col items-center md:items-start gap-2 md:mr-16">
             <h3 class="text-lg font-playfair text-[#DAA520] font-bold">Quick Links</h3>
             <div class="flex flex-col items-center md:items-start gap-1 mt-2 pt-1">
                 <a class="text-sm font-rubik" href="index.html">Home</a>
@@ -203,15 +194,6 @@
 <p class="font-normal leading-normal">© 2025 Ceylon Lotus Gems (PVT) LTD. All rights reserved. Authentically Sourced & Crafted in Sri Lanka.</p>
 </div>
 </footer>
-<div class="fixed bottom-8 right-8 flex flex-col items-center gap-4 z-1000">
-    <!-- Back to Top Button -->
-    <button id="back-to-top-btn" class="hidden p-2 rounded-full bg-black/50 text-white shadow-lg hover:bg-gray-100/70 transition-all duration-300 backdrop-blur-[5px]" aria-label="Go to top">
-        <span class="material-symbols-outlined">arrow_upward</span>
-    </button>
-    <button class="floating-chat-button text-black bg-white/50 shadow-lg hover:bg-gray-100/70 transition-all duration-300" aria-label="Chat with us">
-        <span class="material-symbols-outlined">chat</span>
-    </button>
-</div>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="script.js"></script>
 </body></html>

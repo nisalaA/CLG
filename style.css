@@ -5,7 +5,6 @@ body {
     color: #222; /* Dark gray for readability */
     line-height: 1.6; /* Adjust line spacing for readability */
     /* Add padding to the top to account for the fixed header's height + margin + desired gap */
-    padding-top: 100px;
 }
 
 .content-wrapper {
@@ -39,6 +38,11 @@ p, a, span, div {
 .font-mulish,
 .font-mulish * {
     font-family: 'Mulish', sans-serif;
+}
+
+/* Style for Material Symbols */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined', sans-serif;
 }
 
 /* Luxury Color Palette */
@@ -94,11 +98,23 @@ header {
     -webkit-backdrop-filter: none !important;
 }
 
+/* A solid white header style for specific pages */
+.header-solid-white {
+    position: static !important; /* Override the fixed position from the wrapper */
+    background: #ffffff !important; /* Solid white background */
+    margin: 0 !important; /* Remove margin */
+    border-radius: 0 !important; /* No rounded corners */
+    border: none !important; /* No border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important; /* Subtle bottom shadow */
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
 /* When mobile menu is open, make header background solid */
 header.is-open {
     /* When open, the header will expand, so we want the corners rounded */
-    border-bottom-left-radius: 50px; /* Match the header's default radius */
-    border-bottom-right-radius: 50px; /* Match the header's default radius */
+    border-bottom-left-radius: 1.5rem; /* Match the header's default radius */
+    border-bottom-right-radius: 1.5rem; /* Match the header's default radius */
 }
 
 /* Default header text color for dark backgrounds */
@@ -108,10 +124,11 @@ header .material-symbols-outlined {
     text-shadow: 0 0 5px rgba(34, 34, 34, 0.7); /* Add a subtle black outline/shadow */
     transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
-
-/* Ensure Material Symbols font is applied correctly */
-.material-symbols-outlined {
-    font-family: 'Material Symbols Outlined', sans-serif;
+/* Header text color for light backgrounds */
+.header-light nav a,
+.header-light .material-symbols-outlined {
+    color: #222; /* Black */
+    text-shadow: none;
 }
 
 nav a {

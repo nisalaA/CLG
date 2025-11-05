@@ -67,19 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
         heroVideo.load();
     }
 
-    // Back to Top Button
-    const backToTopBtn = document.getElementById('back-to-top-btn');
-    if (backToTopBtn) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.remove('hidden');
-            } else {
-                backToTopBtn.classList.add('hidden');
-            }
-        });
-        backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-    }
-
     // Testimonial Slider
     const slider = document.getElementById('testimonial-slider');
     if (slider) {
